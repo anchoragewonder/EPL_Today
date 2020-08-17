@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href="epltoday.css">
+      
+    <!-- fav icon -->
+    <link rel='icon' href='assets/icons/favicon-32x32.png' type='image/x-icon' sizes="32x32" />
 
     <title>I am learning bootstrap</title>
     <!-- Optional JavaScript -->
@@ -19,33 +22,56 @@
   </head>
 
   <body> 
-    <h1 class="display-2 mb-0" >THE EPL TODAY</h1>
-        <p class="lead">The leagues best resource to be in the know.</p>
-        <!-- creates navbar option to choose selected team  currently with a hover element-->
-        <div class="navbar">
-          <a href="#">Aresenal</a>
-          <a href="#">Brighton</a>
-          <a href="#">Chelsea</a>
-          <a href="#">Liverpool</a>
-          <a href="#">Manchester United</a>
-          <a href="#">Everton</a>
-          <a href="#">Southhampton</a>
-          <a href="#">Tottenham</a>
-          <a href="#">Wolves</a>
-          <a href="#">Leeds United</a>
-          <a href="#">Burnley</a>
-          <a href="#">Aston Villa</a>
-          <a href="#">Sheffield United</a>
-          <a href="#">Liverpool</a>
-          <a href="#">Chelsea</a>
-          <a href="#">Manchester City</a>
-          <a href="#">West Bromich</a>
-          <a href="#">Crystal Palace</a>
-          <a href="#">Leicster</a>
-          <a href="#">Newcastle United</a>
-          <a href="#">West Ham United</a>
-          <a href="#">Liverpool</a>   
+      
+      <nav class="navbar navbar-expand-sm navbar-dark bg-light sticky-top justify-content-between">
+        <!-- left aligned items--->
+        <div id="left content" class="d-flex justify-content-start">
+            <a class="navbar-brand p-0 m-0">
+                <img src="/assets/icons/epl_logo.svg" width="50" height="50" alt="logo">
+            </a>
         </div>
+        
+        <!-- center aligned items--->
+        <div id="center content" class="d-flex justify-content-center align-self-center m-0">
+            <h2 class="navbar-text" style="color:black"> The EPL Today</h2>
+        </div>
+        
+        <!-- right aligned items--->
+        <div id="right content" class="d-flex justify-content-end">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <span>button</span>
+            </button>
+        </div>
+      </nav>
+      
+      <!-- vertical scrolling--->
+      <div id="teams" class="containter-fluid">
+          <div class="row flex-row flex-nowrap m-auto teamname" style="overflow-y: scroll">
+            <a href="#" class="m-auto p-2 d-flex flex-grow-1">Aresenal</a>
+            <a href="#" class="m-auto p-2 d-flex flex-grow-1">Brighton</a>
+            <a href="#" class="m-auto p-2 d-flex flex-grow-1">Chelsea</a>
+            <a href="#" class="m-auto p-2 d-flex flex-grow-1">Liverpool</a>
+            <a href="#" class="m-auto p-2 d-flex flex-grow-1">Manchester United</a>
+            <a href="#" class="m-auto p-2">Everton</a>
+            <a href="#" class="m-auto p-2">Southhampton</a>
+            <a href="#" class="m-auto p-2">Tottenham</a>
+            <a href="#" class="m-auto p-2">Wolves</a>
+            <a href="#" class="m-auto p-2">Leeds United</a>
+            <a href="#" class="m-auto p-2">Burnley</a>
+            <a href="#" class="m-auto p-2">Aston Villa</a>
+            <a href="#" class="m-auto p-2">Sheffield United</a>
+            <a href="#" class="m-auto p-2">Liverpool</a>
+            <a href="#" class="m-auto p-2">Chelsea</a>
+            <a href="#" class="m-auto p-2">Manchester City</a>
+            <a href="#" class="m-auto p-2">West Bromich</a>
+            <a href="#" class="m-auto p-2">Crystal Palace</a>
+            <a href="#" class="m-auto p-2">Leicster</a>
+            <a href="#" class="m-auto p-2">Newcastle United</a>
+            <a href="#" class="m-auto p-2">West Ham United</a>
+            <a href="#" class="m-auto p-2">Liverpool</a> 
+          </div>
+      </div>
+
     <!-- creates the sidebar that will display teams playing for the given week-->
    <div class="row">
        <div class="sidebar" >
@@ -62,9 +88,9 @@
          <h3 class="display-3 mb-0"> Starting 11? News? Calender?</h3>
        </div>
     </div>
-    <div class="footer">
-      <h2>Footer</h2>
+      
+    <div class="page-footer font-small grey fixed-bottom" style="background-color: darkgray">
+        <div class="text-center py-3">Fixed with ❤️</div>
     </div>
-
   </body>
 </html>

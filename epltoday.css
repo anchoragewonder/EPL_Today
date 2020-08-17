@@ -1,10 +1,5 @@
-body {
-    background-color: antiquewhite;
-}
-.row {  
-    display: flex;
-    flex-wrap: wrap;
-  }
+
+
 .sidebar {
     flex: 30%;
     background-color: burlywood;
@@ -33,37 +28,8 @@ body {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
 }
-.navbar {
-    display: flex;
-    background-color: #333;
-  } 
-  
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-.navbar a:hover {
-    background-color: #ddd;
-   color: black; 
-  }
 
-h1 {
-    text-align: center;  
-}
-h2{
-    text-align: center;
-}
-h3 {
-    text-align: center;
-}
-p{
-    text-align: center;
-    white-space: pre-line;
-}
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
+.teamname a{
+    color: black;
+    border-color: black;
 }
