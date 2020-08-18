@@ -32,4 +32,7 @@
 .teamname a{
     color: black;
     border-color: black;
+    white-space: nowrap!important;
+    margin: auto;
+    padding: .5rem!important;
 }
