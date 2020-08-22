@@ -5,6 +5,10 @@ header{
    text-align: center; 
 
 }
+
+#team_selector{
+    overflow-x: scroll;
+}
 .bg{
     background-image: url("assets/photos/soccer-field.jpeg");
     background-color:hsl(240,100%,20%);
