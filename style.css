@@ -6,7 +6,7 @@ header{
 
 }
 .bg{
-    background-image: url("/CODING/Github/html_learning/alt_not_git/assets/photos/soccer-field.jpeg");
+    background-image: url("assets/photos/soccer-field.jpeg");
     background-color:hsl(240,100%,20%);
     height: 2000px;
     background-position: center;
