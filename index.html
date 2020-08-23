@@ -7,7 +7,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type= "text/css" href="epl-modern.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=redrose">
     <link rel="stylesheet" href="style.css">
       
     <!-- fav icon -->
@@ -116,42 +115,124 @@
         <p>Look at upcoming matches or click on a team below to view thier match schedule.</p>
     </header>
     <main>
-        <h2 class="date">September 12</h2>
+        <h2 class="date">Upcoming Matches</h2>
         <section>
 
             <div class="container">
-                  <div id="score-start" class="scoreboard row">
-                        <div class="home-team col-sm-4"> <img id="score-team" src="assets/logos/cpfc.png"> Crystal Palace</div>
-                        <div class= "match-time  col-sm-4 ">10:00 am est</div>
-                        <div class="away-team col-sm-4"><img id="score-team" src="assets/logos/southhampton.png"> Southhampton</div>
+                  <div id="score-start" class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column"> 
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/cpfc.png">
+                            </div> 
+                            <div class="row m-auto">
+                                <p>Crystal Palace</p>
+                            </div>
+                        </div>
+                        <div class= "match-time  d-flex flex-column ">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/southhampton.png"> 
+                            </div>
+                            <div class="row m-auto">
+                               <p>Southhampton</p> 
+                            </div>
+                        </div>
                     </div>
-                    <div class="scoreboard row">
-                        <div class="home-team"> <img id="score-team" src="assets/logos/ffc.png"> Fulham</div>
-                        <div class= "match-time">10:00 am est</div>
-                        <div class="away-team"><img id="score-team" src="assets/logos/arsenal.png"> Arsenal</div>
+                    <div class="scoreboard row  d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/ffc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Fulham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column" >
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/arsenal.png">
+                            </div> 
+                            <div class="row m-auto">
+                                <p>Arsenal</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="scoreboard row">
-                        <div class="home-team"> <img id="score-team" src="assets/logos/liverpool.png"> Liverpool</div>
-                        <div class= "match-time">10:00 am est</div>
-                        <div class="away-team"><img id="score-team" src="assets/logos/leeds.png"> Leeds United</div>
+                    <div class="scoreboard row  d-flex justify-content-around">
+                        <div class="home-team d-flex flex-column"> 
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/liverpool.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Liverpool</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/leeds.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Leeds United</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="scoreboard row">
-                        <div class="home-team"> <img id="score-team" src="assets/logos/tottenham.png"> Tottenham</div>
-                        <div class= "match-time" >10:00 am est</div>
-                        <div class="away-team"><img id="score-team" src="assets/logos/everton.png"> Everton</div>
+                    <div class="scoreboard row  d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img id="score-team" src="assets/logos/tottenham.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Tottenham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column" >10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class=" row justify-content-center">
+                                <img id="score-team" src="assets/logos/everton.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Everton</p>
+                            </div>
+                        </div>
                     </div>  
-                    <div class="scoreboard row">
-                        <div class="home-team"> <img id="score-team" src="assets/logos/wba.png"> Westbrom</div>
-                        <div class="match-time">10:00 am est</div>
-                        <div class="away-team"><img id="score-team" src="assets/logos/lcfc.png"> Leicster</div>
+                    <div class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img id="score-team" src="assets/logos/wba.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Westbrom</p>
+                            </div>
+                        </div>
+                        <div class="match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img id="score-team" src="assets/logos/lcfc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Leicster</p>
+                            </div>
+                        </div>
                     </div>  
-                    <div class="scoreboard row">
-                        <div class="home-team"> <img id="score-team" src="assets/logos/whufc.png"> Westham</div>
-                        <div class= "match-time">10:00 am est</div>
-                        <div class="away-team"><img id="score-team" src="assets/logos/ncfc.png"> Newcastle</div>
+                    <div class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img id="score-team" src="assets/logos/whufc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Westham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img id="score-team" src="assets/logos/ncfc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Newcastle</p>
+                            </div>
+                        </div>
                     </div>  
-                  
-                
             </div>  
         </section>
     </main>

@@ -1,14 +1,18 @@
 html{
     font-size: 15px;
 }
+img{
+    width: 50px;
+    height: 50px;
+}
 header{
    text-align: center; 
-
 }
 
 #team_selector{
     overflow-x: scroll;
 }
+
 .bg{
     background-image: url("assets/photos/soccer-field.jpeg");
     background-color:hsl(240,100%,20%);
@@ -18,23 +22,15 @@ header{
     background-size: cover;
     position: relative;
 }
+
 .date{
    text-align: center; 
 }
 
 .match-time{
-    /*margin-left: 100px;
-    margin-right: 100px;*/
-    margin-top: auto;
-    margin-bottom: auto;
+    margin:auto;
     text-align: center;
 }
-img{    
-    width:50px;
-    height: 50px; 
-}
-
-
 .navbar{
     margin-bottom: 5px;
 }
@@ -46,29 +42,26 @@ img{
     border: 2px solid black;
     margin:-2px;
     width: 100%;
-
-    /*display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; */
 }
 #score-team{
     width: 40px;
     height: 40px;
-    
 }
 .home-team{
     margin-bottom: 5px;
     padding-top: 5px;
     justify-content: center;
-    
+    flex-basis: 100px;
+
 }
 .away-team{
     margin-top: 5px;
     padding-bottom: 5px;
-   
+    flex-basis: 100px;
 }
 
 p{
     text-align: center;
     vertical-align: auto;
 }
+
