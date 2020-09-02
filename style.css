@@ -4,16 +4,15 @@ html{
 .text-intro{
     font-family: 'Red Rose', cursive;
     font-size: 15px;
+    text-align: center;
 }
 .text-header{
     font-family: 'Red Rose', cursive;
+    text-align: center;
 }
 .logo{
     width: 50px;
     height: 50px;
-}
-header{
-   text-align: center; 
 }
 .team-selector{
     overflow-x: scroll;
