@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type= "text/css" href="epl-modern.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- header font-->
+        <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
+
+        <!-- fav icon -->
+        <link rel='icon' href='assets/icons/favicon-32x32.png' type='image/x-icon' sizes="32x32" />
+
+        <title>A modern fixture table for epl</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg">
+        <header>
+            <nav class="navbar navbar-expand navbar-light bg-light">
+                <div>
+                    <p>Clubs</p>
+                </div>
+                <div class="team-selector">
+                <ul class="navbar-nav">   
+                    <li class="nav-item">
+                    <a class="nav-link"> 
+                        <img class="logo"src="assets/logos/arsenal.png">Arsenal</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link">
+                        <img class="logo"src="assets/logos/avfc.png"> Aston Villa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/brighton.png"> Brighton</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/burnley.png">Burnley</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/chelsea.png">Chelsea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/cpfc.png">Crystal Palace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/everton.png">Everton</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/ffc.png">Fulham</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/lcfc.png">Leicster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/leeds.png">Leeds United</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/liverpool.png">Liverpool</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/mancity.png"> Manchester City</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/manunited.png">Manchester United</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/ncfc.png">Newcastle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/southhampton.png">Southhampton</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/sufc.png">Sheffield United</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/tottenham.png"> Tottenham</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/wba.png"> West Brom</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/whufc.png">Westham United</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img class="logo"src="assets/logos/wolves.png">Wolves</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+            <h1 class="text-header">THIS IS EPL TODAY</h1>
+            <h2 class="text-intro">Look at upcoming matches or click on a team above to view thier upcoming match schedule.</h2>
+        </header>
+        <main>
+            <h3 class="date">Upcoming Matches</h3>
+            <section>
+                <div class="container">
+                    <div id="score-start" class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column"> 
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/cpfc.png">
+                            </div> 
+                            <div class="row m-auto">
+                                <p>Crystal Palace</p>
+                            </div>
+                        </div>
+                        <div class= "match-time  d-flex flex-column ">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/southhampton.png"> 
+                            </div>
+                            <div class="row m-auto">
+                                <p>Southhampton</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scoreboard row  d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/ffc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Fulham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column" >
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/arsenal.png">
+                            </div> 
+                            <div class="row m-auto">
+                                <p>Arsenal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scoreboard row  d-flex justify-content-around">
+                        <div class="home-team d-flex flex-column"> 
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/liverpool.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Liverpool</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/leeds.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Leeds United</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scoreboard row  d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center m-auto">
+                                <img class="score-team" src="assets/logos/tottenham.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Tottenham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column" >10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class=" row justify-content-center">
+                                <img class="score-team" src="assets/logos/everton.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Everton</p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img class="score-team" src="assets/logos/wba.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Westbrom</p>
+                            </div>
+                        </div>
+                        <div class="match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img class="score-team" src="assets/logos/lcfc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Leicster</p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="scoreboard row d-flex justify-content-between">
+                        <div class="home-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img class="score-team" src="assets/logos/whufc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Westham</p>
+                            </div>
+                        </div>
+                        <div class= "match-time d-flex flex-column">10:00 am est</div>
+                        <div class="away-team d-flex flex-column">
+                            <div class="row justify-content-center">
+                                <img class="score-team" src="assets/logos/ncfc.png">
+                            </div>
+                            <div class="row m-auto">
+                                <p>Newcastle</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+            </section>
+        </main>
+    </body> 
+</html>
