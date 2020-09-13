@@ -1,11 +1,6 @@
 var eplMatchlist;
 var dict;
 
-
-
-
-
-
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
     let json = await fetch(path).then(response => response.json());
@@ -38,8 +33,9 @@ function createJSObject(json) {
             dict[awayTeam].push(curMatch);
         }
     }
-}
 
+    console.log(dict);
+}
 
 
 // load JSON data; then proceed
