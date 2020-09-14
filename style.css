@@ -1,22 +1,33 @@
 html{
     font-size: 15px;
 }
+
+p{
+    text-align: center;
+    vertical-align: auto;
+}
+
 .text-intro{
     font-family: 'Red Rose', cursive;
     font-size: 15px;
     text-align: center;
 }
+
 .text-header{
     font-family: 'Red Rose', cursive;
     text-align: center;
 }
+
 .logo{
     width: 50px;
     height: 50px;
+    margin: auto;
 }
+
 .team-selector{
     overflow-x: scroll;
 }
+
 .bg{
     background-image: url("assets/photos/soccer-field.jpeg");
     background-color:hsl(240,100%,20%);
@@ -26,42 +37,48 @@ html{
     background-size: cover;
     position: relative;
 }
+
 .date{
    text-align: center; 
 }
+
 .match-time{
     margin:auto;
     text-align: center;
 }
+
 .navbar{
     margin-bottom: 5px;
 }
+
 #score-start{
     border-top: 2px solid black;
 }
+
 .scoreboard{
     background-color: hsla(240,100%,80%, .7);;
     border: 2px solid black;
     margin:-2px;
     width: 100%;
 }
+
 .score-team{
     width: 40px;
     height: 40px;
 }
+
 .home-team{
     margin-bottom: 5px;
     padding-top: 5px;
     justify-content: center;
     flex-basis: 100px;
 }
+
 .away-team{
     margin-top: 5px;
     padding-bottom: 5px;
     flex-basis: 100px;
 }
-p{
-    text-align: center;
-    vertical-align: auto;
-}
+
+
 
