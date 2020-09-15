@@ -1,6 +1,7 @@
 var eplMatchlist;
 var dict;
 var footballClub;
+var curId;
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -34,7 +35,7 @@ function createJSObject(json) {
             dict[awayTeam].push(curMatch);
         }
     }
-    console.log(dict);
+    //console.log(dict);
 }
 
 // load JSON data; then proceed
@@ -44,15 +45,22 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/201
 
 $(document).ready(function () {
     $('a').click(function(){
+
         if($(this).attr('id') =='Arsenal FC'){
+            var curId = $(this).attr('id');
             $('#homeLogo1').attr('src','assets/logos/arsenal.png');
-            $('#homeName1').text('Arsenal');
+            $('#homeName1').text(dict[curId][0].team1);
+            $('#awayLogo1').attr('src','assets/logos/whufc.png');
+            $('#awayName1').text(dict[curId][0].team2);
         }
+
         else{
-            alert("this did not work");
+            alert("this is not arsenal");
         }
-      })
+    })
 })
 
 
+
+    
 
