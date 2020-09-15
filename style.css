@@ -4,7 +4,7 @@ html{
 
 p{
     text-align: center;
-    vertical-align: auto;
+    
 }
 
 .text-intro{
@@ -68,15 +68,17 @@ p{
 }
 
 .home-team{
-    margin-bottom: 5px;
-    padding-top: 5px;
+    margin: auto;
+    margin-top: 20px;
     justify-content: center;
     flex-basis: 100px;
 }
 
 .away-team{
-    margin-top: 5px;
+    margin: auto;
+    margin-top: 20px;
     padding-bottom: 5px;
+    justify-content: center;
     flex-basis: 100px;
 }
 

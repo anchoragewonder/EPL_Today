@@ -1,5 +1,6 @@
 var eplMatchlist;
 var dict;
+var footballClub;
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -33,13 +34,25 @@ function createJSObject(json) {
             dict[awayTeam].push(curMatch);
         }
     }
-
     console.log(dict);
 }
-
 
 // load JSON data; then proceed
 getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json').then(data => {
     eplMatchlist = data;
-}
-);
+})
+
+$(document).ready(function () {
+    $('a').click(function(){
+        if($(this).attr('id') =='Arsenal FC'){
+            $('#homeLogo1').attr('src','assets/logos/arsenal.png');
+            $('#homeName1').text('Arsenal');
+        }
+        else{
+            alert("this did not work");
+        }
+      })
+})
+
+
+
