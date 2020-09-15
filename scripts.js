@@ -44,17 +44,43 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/201
 })
 
 $(document).ready(function () {
-    $('a').click(function(){
+    $('a').click(function () {
 
-            var curId = $(this).attr('id');
-            $('#homeLogo1').attr('src','assets/logos/arsenal.png');
-            $('#homeName1').text(dict[curId][0].team1);
-            $('#awayLogo1').attr('src','assets/logos/whufc.png');
-            $('#awayName1').text(dict[curId][0].team2);
+        var curId = $(this).attr('id');
+        var score_card_prefab = $(document).getElementById('score_start');
+        var parent = $(document).getElementById('score_table');
+
+        //need to clear parent element
+
+        //going through the list of elements by id
+        for (let i = 0; i < dict[curId].length; i++) {
+
+            //cloning the prefab element
+            let score_card = score_card_prefab.clone();
+
+            //getting home logo child element of newly cloned object
+            let homeLogo = score_card.querySelector('#homeLogo');
+
+            //home name
+            let homeName = score_card.querySelector('#homeName');
+
+            //away logo
+
+            //away name
+
+
+            homeName.text = dict[curId][i].team1;
+
+            //set parent of score card to the parent element above
+        }
+        $('#homeLogo1').attr('src', 'assets/logos/arsenal.png');
+        $('#homeName1').text(dict[curId][0].team1);
+        $('#awayLogo1').attr('src', 'assets/logos/whufc.png');
+        $('#awayName1').text(dict[curId][0].team2);
     })
 })
 
 
 
-    
+
 
