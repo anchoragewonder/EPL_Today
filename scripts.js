@@ -66,13 +66,13 @@ $(document).ready(function () {
             var trimAway = awayNameText.replace(/\s/g,'');
 
             //getting home logo child element of newly cloned object
-            //$(score_card).find('#homeLogo').attr('src','assets/logos/'+trimHome+'.png');
+            $(score_card).find('#homeLogo').attr('src','assets/logos/'+trimHome+'.png');
 
             //home name
             $(score_card).find('#homeName').text(homeNameText);
 
             //away logo
-            //$(score_card).find('#awayLogo').attr('src','assets/logos/'+awayNameText+'.png');
+            $(score_card).find('#awayLogo').attr('src','assets/logos/'+trimAway+'.png');
             
             //away name
             $(score_card).find('#awayName').text(awayNameText);
