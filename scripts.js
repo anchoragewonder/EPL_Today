@@ -40,7 +40,7 @@ function createJSObject(json) {
 }
 
 // load JSON data; then proceed
-getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json').then(data => {
+getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json').then(data => {
     eplMatchlist = data;
 })
 
