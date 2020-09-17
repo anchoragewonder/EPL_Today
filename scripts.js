@@ -2,6 +2,7 @@ var eplMatchlist;
 var dict;
 var footballClub;
 var curId;
+var score_card_prefab;
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -44,47 +45,33 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/201
 })
 
 $(document).ready(function () {
+    var score_card_prefab = document.getElementById('score_start').cloneNode(true);
+
     $('a').click(function () {
 
         var curId = $(this).attr('id');
-        var score_card_prefab = $('#score_start');
-        var parent = $('#score_table');
 
-        //need to clear parent element
-        //$(this).closest('#score_table').remove();
+        var parent = document.getElementById('score_table');
+        parent.innerHTML = '';
 
         //going through the list of elements by id
         for (let i = 0; i < dict[curId].length; i++) {
-            
+
             //cloning the prefab element
-            let score_card = score_card_prefab.clone();
-
-            //getting home logo child element of newly cloned object
-            let homeLogo = score_card.find('#homeLogo');
-            //home name
-            let homeName = score_card.find('#homeName');
-            //away logo
-            let awayLogo = score_card.find('#awayLogo');
-            //away name
-            let awayName = score_card.find('#awayName');
-
+            let score_card = score_card_prefab.cloneNode(true);
             let homeNameText = dict[curId][i].team1;
             let awayNameText = dict[curId][i].team2;
 
-           //set parent of score card to the parent element above
-            score_card.parent() == parent;
-            
-            /* attempt at iterating though every instance of homename
-            $(homeName).each(function(i) {
-              return $(homeName).text(homeNameText);  
-            });*/
+            //getting home logo child element of newly cloned object
+            let homeLogo = $(score_card).find('#homeLogo');
+            //home name
+            $(score_card).find('#homeName').text(homeNameText);
+            //away logo
+            let awayLogo = $(score_card).find('#awayLogo');
+            //away name
+            $(score_card).find('#awayName').text(awayNameText);
 
-            // check to see if the var holds home name values
-            console.log(homeNameText);
-
-            /* populates the first instance of id homename with corrext team
-            $('#homeName').children('p').text(homeNameText);
-            */
+            parent.appendChild(score_card);
         }
     })
 })
