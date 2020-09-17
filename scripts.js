@@ -47,36 +47,45 @@ $(document).ready(function () {
     $('a').click(function () {
 
         var curId = $(this).attr('id');
-        var score_card_prefab = $(document).getElementById('score_start');
-        var parent = $(document).getElementById('score_table');
+        var score_card_prefab = $('#score_start');
+        var parent = $('#score_table');
 
         //need to clear parent element
+        //$(this).closest('#score_table').remove();
 
         //going through the list of elements by id
         for (let i = 0; i < dict[curId].length; i++) {
-
+            
             //cloning the prefab element
             let score_card = score_card_prefab.clone();
 
             //getting home logo child element of newly cloned object
-            let homeLogo = score_card.querySelector('#homeLogo');
-
+            let homeLogo = score_card.find('#homeLogo');
             //home name
-            let homeName = score_card.querySelector('#homeName');
-
+            let homeName = score_card.find('#homeName');
             //away logo
-
+            let awayLogo = score_card.find('#awayLogo');
             //away name
+            let awayName = score_card.find('#awayName');
 
+            let homeNameText = dict[curId][i].team1;
+            let awayNameText = dict[curId][i].team2;
 
-            homeName.text = dict[curId][i].team1;
+           //set parent of score card to the parent element above
+            score_card.parent() == parent;
+            
+            /* attempt at iterating though every instance of homename
+            $(homeName).each(function(i) {
+              return $(homeName).text(homeNameText);  
+            });*/
 
-            //set parent of score card to the parent element above
+            // check to see if the var holds home name values
+            console.log(homeNameText);
+
+            /* populates the first instance of id homename with corrext team
+            $('#homeName').children('p').text(homeNameText);
+            */
         }
-        $('#homeLogo1').attr('src', 'assets/logos/arsenal.png');
-        $('#homeName1').text(dict[curId][0].team1);
-        $('#awayLogo1').attr('src', 'assets/logos/whufc.png');
-        $('#awayName1').text(dict[curId][0].team2);
     })
 })
 
