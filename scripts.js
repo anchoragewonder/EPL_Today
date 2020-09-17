@@ -55,23 +55,31 @@ $(document).ready(function () {
         parent.innerHTML = '';
 
         //going through the list of elements by id
-        for (let i = 0; i < dict[curId].length; i++) {
+        for (let i = 0; i < dict[curId].length-28; i++) {
 
             //cloning the prefab element
             let score_card = score_card_prefab.cloneNode(true);
             let homeNameText = dict[curId][i].team1;
             let awayNameText = dict[curId][i].team2;
 
+            var trimHome = homeNameText.replace(/\s/g,'');
+            var trimAway = awayNameText.replace(/\s/g,'');
+
             //getting home logo child element of newly cloned object
-            let homeLogo = $(score_card).find('#homeLogo');
+            //$(score_card).find('#homeLogo').attr('src','assets/logos/'+trimHome+'.png');
+
             //home name
             $(score_card).find('#homeName').text(homeNameText);
+
             //away logo
-            let awayLogo = $(score_card).find('#awayLogo');
+            //$(score_card).find('#awayLogo').attr('src','assets/logos/'+awayNameText+'.png');
+            
             //away name
             $(score_card).find('#awayName').text(awayNameText);
 
             parent.appendChild(score_card);
+
+            console.log(trimHome);
         }
     })
 })

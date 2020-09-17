@@ -31,7 +31,7 @@ p{
 .bg{
     background-image: url("assets/photos/soccer-field.jpeg");
     background-color:hsl(240,100%,20%);
-    height: 2000px;
+    height: 1500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
