@@ -45,7 +45,7 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/201
 })
 
 $(document).ready(function () {
-    var score_card_prefab = document.getElementById('score_start').cloneNode(true);
+    score_card_prefab = document.getElementById('score_start').cloneNode(true);
 
     $('a').click(function () {
 
