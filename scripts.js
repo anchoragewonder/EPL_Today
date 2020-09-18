@@ -55,25 +55,25 @@ $(document).ready(function () {
         parent.innerHTML = '';
 
         //going through the list of elements by id
-        for (let i = 0; i < dict[curId].length-28; i++) {
+        for (let i = 0; i < 10; i++) {
 
             //cloning the prefab element
             let score_card = score_card_prefab.cloneNode(true);
             let homeNameText = dict[curId][i].team1;
             let awayNameText = dict[curId][i].team2;
 
-            var trimHome = homeNameText.replace(/\s/g,'');
-            var trimAway = awayNameText.replace(/\s/g,'');
+            var trimHome = homeNameText.replace(/\s/g, '');
+            var trimAway = awayNameText.replace(/\s/g, '');
 
             //getting home logo child element of newly cloned object
-            $(score_card).find('#homeLogo').attr('src','assets/logos/'+trimHome+'.png');
+            $(score_card).find('#homeLogo').attr('src', 'assets/logos/' + trimHome + '.png');
 
             //home name
             $(score_card).find('#homeName').text(homeNameText);
 
             //away logo
-            $(score_card).find('#awayLogo').attr('src','assets/logos/'+trimAway+'.png');
-            
+            $(score_card).find('#awayLogo').attr('src', 'assets/logos/' + trimAway + '.png');
+
             //away name
             $(score_card).find('#awayName').text(awayNameText);
 
