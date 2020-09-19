@@ -63,7 +63,7 @@ $(document).ready(function () {
 
             var trimHome = homeNameText.replace(/\s/g, '');
             var trimAway = awayNameText.replace(/\s/g, '');
-
+           
             //getting home logo child element of newly cloned object
             $(score_card).find('#homeLogo').attr('src', 'assets/logos/' + trimHome + '.png');
 
