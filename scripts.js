@@ -78,7 +78,6 @@ $(document).ready(function () {
 
             parent.appendChild(score_card);
 
-            console.log(trimHome);
         }
     })
 })
