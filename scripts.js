@@ -14,27 +14,26 @@ function createJSObject(json) {
 
     dict = new Object();
 
-    for (let i = 0; i < json.rounds.length; i++) {
-        let matches = json.rounds[i].matches;
+    for (let i = 0; i < json.matches.length; i++) {
 
+        let games = json.matches[i];
 
-        for (let j = 0; j < matches.length; j++) {
-            let curMatch = matches[j];
-            let homeTeam = curMatch.team1;
-            let awayTeam = curMatch.team2;
+        let curMatch = games[i];
+        let homeTeam = curMatch['team1'];
+        let awayTeam = curMatch.team2;
 
-
-            if (!(homeTeam in dict)) {
-                dict[homeTeam] = [];
-            }
-
-            if (!(awayTeam in dict)) {
-                dict[awayTeam] = [];
-            }
-
-            dict[homeTeam].push(curMatch);
-            dict[awayTeam].push(curMatch);
+        if (!(homeTeam in dict)) {
+            dict[homeTeam] = [];
         }
+
+        if (!(awayTeam in dict)) {
+            dict[awayTeam] = [];
+        }
+
+        dict[homeTeam].push(curMatch);
+        dict[awayTeam].push(curMatch);
+        //for (let j = 0; j < matches.length; j++) {
+    
     }
     console.log(dict);
 }
