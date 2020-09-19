@@ -18,9 +18,9 @@ function createJSObject(json) {
 
         let games = json.matches[i];
 
-        let curMatch = games[i];
-        let homeTeam = curMatch['team1'];
-        let awayTeam = curMatch.team2;
+        
+        let homeTeam = games.team1;
+        let awayTeam = games.team2;
 
         if (!(homeTeam in dict)) {
             dict[homeTeam] = [];
@@ -30,8 +30,8 @@ function createJSObject(json) {
             dict[awayTeam] = [];
         }
 
-        dict[homeTeam].push(curMatch);
-        dict[awayTeam].push(curMatch);
+        dict[homeTeam].push(games);
+        dict[awayTeam].push(games);
         //for (let j = 0; j < matches.length; j++) {
     
     }
