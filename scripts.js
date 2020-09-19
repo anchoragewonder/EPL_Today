@@ -58,9 +58,13 @@ $(document).ready(function () {
 
             //cloning the prefab element
             let score_card = score_card_prefab.cloneNode(true);
+
+            // getting names of home and away teams along with match date
             let homeNameText = dict[curId][i].team1;
             let awayNameText = dict[curId][i].team2;
-
+            let gameDate= dict[curId][i].date;
+            
+            // removing whitepace from home and away teams to match img id
             var trimHome = homeNameText.replace(/\s/g, '');
             var trimAway = awayNameText.replace(/\s/g, '');
            
@@ -76,8 +80,24 @@ $(document).ready(function () {
             //away name
             $(score_card).find('#awayName').text(awayNameText);
 
-            parent.appendChild(score_card);
+            //game date
+            $(score_card).find('#date').text(gameDate);
 
+            //home and away score loop to do a null check and skip if not present
+            for(let j = 0; j < 10; j++ ){
+
+                //continue statement to check if score exists
+                if(!dict[curId][i].score){continue;}
+
+                let homeScore= dict[curId][i].score.ft[0];
+                let awayScore= dict[curId][i].score.ft[1];
+
+                $(score_card).find('#homeScore').text(homeScore);
+                $(score_card).find('#awayScore').text(awayScore);
+            }
+            
+            parent.appendChild(score_card);
+           
         }
     })
 })
