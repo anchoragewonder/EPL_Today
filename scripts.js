@@ -32,7 +32,7 @@ function createJSObject(json) {
 
         dict[homeTeam].push(games);
         dict[awayTeam].push(games);
-        //for (let j = 0; j < matches.length; j++) {
+
     
     }
     console.log(dict);
@@ -44,14 +44,17 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/202
 })
 
 $(document).ready(function () {
-    score_card_prefab = document.getElementById('score_start').cloneNode(true);
+    score_card_prefab = document.getElementById('card_start').cloneNode(true);
+
+    var parent = document.getElementById('score_table');
+    parent.innerHTML = '';
 
     $('a').click(function () {
 
         var curId = $(this).attr('id');
 
-        var parent = document.getElementById('score_table');
         parent.innerHTML = '';
+        
 
         //going through the list of elements by id
         for (let i = 0; i < 10; i++) {

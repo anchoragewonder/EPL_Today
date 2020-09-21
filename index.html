@@ -209,133 +209,32 @@
         <h3 class="date">Upcoming Matches</h3>
         <section>
             <div id="score_table" class="container">
-                <div id="score_start" class="scoreboard row d-flex justify-content-between">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img id="homeLogo" class="score-team" src="assets/logos/CrystalPalaceFC.png">
-                        </div>
-                        <div id="homeName" class="row m-auto">
-                            <p>Crystal Palace</p>
-                        </div>
-                    </div>
-                    <div id="homeScore" class= 'match-time d-flex flex-column'></div>
-                    <div id="date" class="match-time  d-flex flex-column ">10:00 am est</div>
-                    <div id="awayScore" class= 'match-time d-flex flex-column'></div>
-                    <div class="away-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img id="awayLogo" class="score-team" src="assets/logos/SouthamptonFC.png">
-                        </div>
-                        <div id="awayName" class="row m-auto">
-                            <p>Southhampton</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- messing around with cards figuring it out-->
-                <div class="card text-white bg-dark mb-3" style="max-width: 800px;">
-                    <div class='card-header'>Header</div>
+                <div id="card_start" class="card text-white bg-dark mb-3" style="max-width: 1200px;">
                     <div class="card-body">
-                      <h5 class="card-title">Dark card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div id="score_start" class="scoreboard row d-flex justify-content-between">
+                            <div class="home-team d-flex flex-column">
+                                <div class="row justify-content-center m-auto">
+                                    <img id="homeLogo" class="score-team" src="assets/logos/CrystalPalaceFC.png">
+                                </div>
+                                <div id="homeName" class="row m-auto">
+                                    <p>Crystal Palace</p>
+                                </div>
+                            </div>
+                            <div id="homeScore" class= 'match-time d-flex flex-column'></div>
+                            <div id="date" class="match-time  d-flex flex-column ">10:00 am est</div>
+                            <div id="awayScore" class= 'match-time d-flex flex-column'></div>
+                            <div class="away-team d-flex flex-column">
+                                <div class="row justify-content-center m-auto">
+                                    <img id="awayLogo" class="score-team" src="assets/logos/SouthamptonFC.png">
+                                </div>
+                                <div id="awayName" class="row m-auto">
+                                    <p>Southhampton</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                <!-- Do I really need this if im just cloning the first instance
-                    replace with something else
+                </div>
 
-                    <div class="scoreboard row  d-flex justify-content-between">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img class="score-team" src="assets/logos/FulhamFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Fulham</p>
-                        </div>
-                    </div>
-                    <div class="match-time d-flex flex-column">10:00 am est</div>
-                    <div class="away-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img class="score-team" src="assets/logos/ArsenalFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Arsenal</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scoreboard row  d-flex justify-content-around">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img class="score-team" src="assets/logos/LiverpoolFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Liverpool</p>
-                        </div>
-                    </div>
-                    <div class="match-time d-flex flex-column">10:00 am est</div>
-                    <div class="away-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img class="score-team" src="assets/logos/LeedsUnitedFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Leeds United</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scoreboard row  d-flex justify-content-between">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center m-auto">
-                            <img class="score-team" src="assets/logos/TottenhamHotspurFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Tottenham</p>
-                        </div>
-                    </div>
-                    <div class="match-time d-flex flex-column">10:00 am est</div>
-                    <div class="away-team d-flex flex-column">
-                        <div class=" row justify-content-center">
-                            <img class="score-team" src="assets/logos/EvertonFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Everton</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scoreboard row d-flex justify-content-between">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center">
-                            <img class="score-team" src="assets/logos/WestBromwichAlbionFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Westbrom</p>
-                        </div>
-                    </div>
-                    <div class="match-time d-flex flex-column">10:00 am est</div>
-                    <div class="away-team d-flex flex-column">
-                        <div class="row justify-content-center">
-                            <img class="score-team" src="assets/logos/LeicesterCityFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Leicster</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scoreboard row d-flex justify-content-between">
-                    <div class="home-team d-flex flex-column">
-                        <div class="row justify-content-center">
-                            <img class="score-team" src="assets/logos/WestHamUnitedFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Westham</p>
-                        </div>
-                    </div>
-                    <div class="match-time d-flex flex-column">10:00 am est</div>
-                    <div class="away-team d-flex flex-column">
-                        <div class="row justify-content-center">
-                            <img class="score-team" src="assets/logos/NewcastleUnitedFC.png">
-                        </div>
-                        <div class="row m-auto">
-                            <p>Newcastle</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
     </main>
