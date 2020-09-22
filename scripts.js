@@ -80,18 +80,14 @@ $(document).ready(function () {
             //game date
             $(score_card).find('#date').text(gameDate);
 
-            //home and away score loop to do a null check and skip if not present
-            for (let j = 0; j < matchNum; j++) {
-
-                //continue statement to check if score exists
-                if (!dict[curId][i].score) { continue; }
-
+            if (dict[curId][i].score) {
                 let homeScore = dict[curId][i].score.ft[0];
                 let awayScore = dict[curId][i].score.ft[1];
 
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
             }
+
             parent.appendChild(score_card);
         }
     })
