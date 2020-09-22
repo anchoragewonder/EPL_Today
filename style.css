@@ -67,20 +67,14 @@ p{
     height: 40px;
 }
 
-.home-team{
+.home-away-team{
     margin: auto;
     margin-top: 20px;
     justify-content: center;
     flex-basis: 100px;
 }
 
-.away-team{
-    margin: auto;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    justify-content: center;
-    flex-basis: 100px;
-}
+
 
 
 

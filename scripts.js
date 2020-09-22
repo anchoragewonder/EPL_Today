@@ -1,8 +1,9 @@
 var eplMatchlist;
 var dict;
-var footballClub;
 var curId;
 var score_card_prefab;
+var parent;
+var matchNum = 8;
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -17,8 +18,6 @@ function createJSObject(json) {
     for (let i = 0; i < json.matches.length; i++) {
 
         let games = json.matches[i];
-
-        
         let homeTeam = games.team1;
         let awayTeam = games.team2;
 
@@ -29,11 +28,8 @@ function createJSObject(json) {
         if (!(awayTeam in dict)) {
             dict[awayTeam] = [];
         }
-
         dict[homeTeam].push(games);
         dict[awayTeam].push(games);
-
-    
     }
     console.log(dict);
 }
@@ -52,12 +48,10 @@ $(document).ready(function () {
     $('a').click(function () {
 
         var curId = $(this).attr('id');
-
         parent.innerHTML = '';
-        
 
         //going through the list of elements by id
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < matchNum; i++) {
 
             //cloning the prefab element
             let score_card = score_card_prefab.cloneNode(true);
@@ -65,12 +59,12 @@ $(document).ready(function () {
             // getting names of home and away teams along with match date
             let homeNameText = dict[curId][i].team1;
             let awayNameText = dict[curId][i].team2;
-            let gameDate= dict[curId][i].date;
-            
+            let gameDate = dict[curId][i].date;
+
             // removing whitepace from home and away teams to match img id
-            var trimHome = homeNameText.replace(/\s/g, '');
-            var trimAway = awayNameText.replace(/\s/g, '');
-           
+            let trimHome = homeNameText.replace(/\s/g, '');
+            let trimAway = awayNameText.replace(/\s/g, '');
+
             //getting home logo child element of newly cloned object
             $(score_card).find('#homeLogo').attr('src', 'assets/logos/' + trimHome + '.png');
 
@@ -87,25 +81,18 @@ $(document).ready(function () {
             $(score_card).find('#date').text(gameDate);
 
             //home and away score loop to do a null check and skip if not present
-            for(let j = 0; j < 10; j++ ){
+            for (let j = 0; j < matchNum; j++) {
 
                 //continue statement to check if score exists
-                if(!dict[curId][i].score){continue;}
+                if (!dict[curId][i].score) { continue; }
 
-                let homeScore= dict[curId][i].score.ft[0];
-                let awayScore= dict[curId][i].score.ft[1];
+                let homeScore = dict[curId][i].score.ft[0];
+                let awayScore = dict[curId][i].score.ft[1];
 
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
             }
-            
             parent.appendChild(score_card);
-           
         }
     })
 })
-
-
-
-
-
