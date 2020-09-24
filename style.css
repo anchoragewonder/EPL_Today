@@ -9,7 +9,7 @@ p{
 
 .text-intro{
     font-family: 'Red Rose', cursive;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -29,13 +29,15 @@ p{
 }
 
 .bg{
-    background-image: url("assets/photos/soccer-field.jpeg");
-    background-color:hsl(240,100%,20%);
-    height: 1500px;
+    background-color:#45a29e;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.bgNav{
+    background-color: whitesmoke;
 }
 
 .date{
@@ -74,7 +76,9 @@ p{
     flex-basis: 100px;
 }
 
-
+.center-text{
+    text-align: center;
+}
 
 
 
