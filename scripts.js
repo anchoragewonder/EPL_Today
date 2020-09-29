@@ -3,7 +3,7 @@ var dict;
 var curId;
 var score_card_prefab;
 var parent;
-var matchNum = 8;
+var matchNum = 28;
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {

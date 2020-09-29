@@ -29,15 +29,11 @@ p{
 }
 
 .bg{
-    background-color:#45a29e;
+    background-color:#34495E ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
-
-.bgNav{
-    background-color: whitesmoke;
 }
 
 .date{
@@ -46,39 +42,56 @@ p{
 
 .match-time{
     margin:auto;
-    text-align: center;
+    text-align:center;
+    flex-shrink: 0;
 }
 
 .navbar{
     margin-bottom: 5px;
+    background-color:whitesmoke;
 }
 
-#score-start{
-    border-top: 2px solid black;
-}
-
-.scoreboard{
-    
-    border: 2px solid black;
-    margin:-2px;
-    width: 100%;
+.scoreboard{    
+    flex-flow: row;
 }
 
 .score-team{
     width: 40px;
     height: 40px;
+    justify-content: center;
 }
 
 .home-away-team{
-    margin: auto;
-    margin-top: 20px;
-    justify-content: center;
-    flex-basis: 100px;
+    max-height: 75px;
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+
+.points{
+    background-color: green;
+    border:5px solid green;
+    border-radius: 20px;
+    color: honeydew;
+}
+
+div.points:empty{
+    border:none;
 }
 
 .center-text{
     text-align: center;
 }
 
-
-
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 10px;
+    }
+    .score-team{
+        width: 30px;
+        height: 30px;
+    }
+    .home-away-team{
+        max-height: 100px;
+        flex-basis: 100px;
+    }
+}
