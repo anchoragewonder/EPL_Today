@@ -34,10 +34,7 @@ function createJSObject(json) {
     console.log(dict);
 }
 
-function colorChange() {
-    let home = document.getElementById('homeScore');
-    let away = document.getElementById('awayScore');
-
+function colorChange(home, away) {
     let Color = document.getElementsByClassName('points');
 
     if (home < away) {
@@ -50,7 +47,7 @@ function colorChange() {
     }
     else if (away == home) {
         Color[0].background - color; grey;
-        Color[1] / background - color; grey;
+        Color[1].background - color; grey;
     }
 
 
@@ -108,9 +105,9 @@ $(document).ready(function () {
 
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
-            }
-            colorChange();
 
+                colorChange(homeScore, awayScore);
+            }
             parent.appendChild(score_card);
         }
     })
