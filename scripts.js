@@ -34,25 +34,6 @@ function createJSObject(json) {
     console.log(dict);
 }
 
-function colorChange(home, away) {
-    let Color = document.getElementsByClassName('points');
-
-    if (home < away) {
-        Color[0].background - color; green;
-        Color[1].background - color; red;
-    }
-    else if (away > home) {
-        Color[0].background - color; red;
-        Color[1].background - color; green;
-    }
-    else if (away == home) {
-        Color[0].background - color; grey;
-        Color[1].background - color; grey;
-    }
-
-
-}
-
 // load JSON data; then proceed
 getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/en.1.json').then(data => {
     eplMatchlist = data;
@@ -106,7 +87,7 @@ $(document).ready(function () {
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
 
-                colorChange(homeScore, awayScore);
+                $(score_card).find('#homeScore').css({ 'backgroundColor': 'blue', 'borderColor': 'blue' });
             }
             parent.appendChild(score_card);
         }

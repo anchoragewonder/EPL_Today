@@ -67,14 +67,25 @@ p{
     flex-basis: 150px;
 }
 
-.points{
+#homeScore{
     background-color: green;
     border:5px solid green;
     border-radius: 20px;
     color: honeydew;
 }
 
-div.points:empty{
+#awayScore{
+    background-color: rgb(128, 0, 0);
+    border:5px solid rgb(128, 0, 0);
+    border-radius: 20px;
+    color: honeydew;
+}
+
+div#awayScore:empty{
+    border:none;
+}
+
+div#homeScore:empty{
     border:none;
 }
 
