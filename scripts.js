@@ -4,6 +4,9 @@ var curId;
 var score_card_prefab;
 var parent;
 var matchNum = 28;
+var homeScore;
+var awayScore;
+
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -81,13 +84,59 @@ $(document).ready(function () {
             $(score_card).find('#date').text(gameDate);
 
             if (dict[curId][i].score) {
-                let homeScore = dict[curId][i].score.ft[0];
-                let awayScore = dict[curId][i].score.ft[1];
+                var homeScore = dict[curId][i].score.ft[0];
+                var awayScore = dict[curId][i].score.ft[1];
 
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
 
-                $(score_card).find('#homeScore').css({ 'backgroundColor': 'blue', 'borderColor': 'blue' });
+                $(score_card).find('#homeScore').css({
+                    'backgroundColor': function () {
+                        if (homeScore < awayScore) {
+                            return 'red';
+                        }
+                        else if (homeScore > awayScore) {
+                            return 'green';
+                        }
+                        else if (homeScore == awayScore) {
+                            return 'grey';
+                        }
+                    }, 'borderColor': function () {
+                        if (homeScore < awayScore) {
+                            return 'red';
+                        }
+                        else if (homeScore > awayScore) {
+                            return 'green';
+                        }
+                        else if (homeScore == awayScore) {
+                            return 'grey';
+                        }
+                    }
+                });
+                $(score_card).find('#awayScore').css({
+                    'backgroundColor': function () {
+                        if (homeScore < awayScore) {
+                            return 'green';
+                        }
+                        else if (homeScore > awayScore) {
+                            return 'red';
+                        }
+                        else if (homeScore == awayScore) {
+                            return 'grey';
+                        }
+                    }, 'borderColor': function () {
+                        if (homeScore < awayScore) {
+                            return 'green';
+                        }
+                        else if (homeScore > awayScore) {
+                            return 'red';
+                        }
+                        else if (homeScore == awayScore) {
+                            return 'grey';
+                        }
+                    }
+                });
+
             }
             parent.appendChild(score_card);
         }
