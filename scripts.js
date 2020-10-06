@@ -45,9 +45,9 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/202
 function getScoreColor(score1, score2) {
     let color = '';
     if (score1 > score2) {
-        color = 'red';
-    } else if (score1 < score2) {
         color = 'green';
+    } else if (score1 < score2) {
+        color = 'red';
     } else {
         color = 'grey';
     }
@@ -108,8 +108,8 @@ $(document).ready(function () {
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
 
-                $(score_card).find('#homeScore').css('backgroundColor', homeColor);
-                $(score_card).find('#awayScore').css('backgroundColor', awayColor);
+                $(score_card).find('#homeScore').css({ 'backgroundColor': homeColor, 'borderColor': homeColor });
+                $(score_card).find('#awayScore').css({ 'backgroundColor': awayColor, 'borderColor': awayColor });
             }
             parent.appendChild(score_card);
         }
