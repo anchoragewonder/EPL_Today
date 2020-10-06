@@ -43,20 +43,15 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/202
 })
 
 function getScoreColor(score1, score2) {
-
-    switch (score1) {
-        case score1 > score2:
-            return 'red';
-
-        case score1 < score2:
-            return 'green';
-
-        case score1 == score2:
-            return 'grey';
-
-        default:
-            return null;
+    let color = '';
+    if (score1 > score2) {
+        color = 'red';
+    } else if (score1 < score2) {
+        color = 'green';
+    } else {
+        color = 'grey';
     }
+    return color;
 }
 
 $(document).ready(function () {
@@ -101,40 +96,20 @@ $(document).ready(function () {
             $(score_card).find('#date').text(gameDate);
 
             if (dict[curId][i].score) {
-                var homeScore = dict[curId][i].score.ft[0];
-                var awayScore = dict[curId][i].score.ft[1];
+                let homeScore = dict[curId][i].score.ft[0];
+                let awayScore = dict[curId][i].score.ft[1];
 
+                console.log('home:' + homeScore + 'away:' + awayScore);
                 let homeColor = getScoreColor(homeScore, awayScore);
                 let awayColor = getScoreColor(awayScore, homeScore);
+
+                console.log('home:' + homeColor + 'away:' + awayColor);
 
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
 
                 $(score_card).find('#homeScore').css('backgroundColor', homeColor);
-                $(score_card).find('#awayScore').css({
-                    'backgroundColor': function () {
-                        if (homeScore < awayScore) {
-                            return 'green';
-                        }
-                        else if (homeScore > awayScore) {
-                            return 'red';
-                        }
-                        else if (homeScore == awayScore) {
-                            return 'grey';
-                        }
-                    }, 'borderColor': function () {
-                        if (homeScore < awayScore) {
-                            return 'green';
-                        }
-                        else if (homeScore > awayScore) {
-                            return 'red';
-                        }
-                        else if (homeScore == awayScore) {
-                            return 'grey';
-                        }
-                    }
-                });
-
+                $(score_card).find('#awayScore').css('backgroundColor', awayColor);
             }
             parent.appendChild(score_card);
         }
