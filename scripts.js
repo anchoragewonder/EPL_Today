@@ -42,6 +42,23 @@ getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/202
     eplMatchlist = data;
 })
 
+function getScoreColor(score1, score2) {
+
+    switch (score1) {
+        case score1 > score2:
+            return 'red';
+
+        case score1 < score2:
+            return 'green';
+
+        case score1 == score2:
+            return 'grey';
+
+        default:
+            return null;
+    }
+}
+
 $(document).ready(function () {
     score_card_prefab = document.getElementById('card_start').cloneNode(true);
 
@@ -87,32 +104,13 @@ $(document).ready(function () {
                 var homeScore = dict[curId][i].score.ft[0];
                 var awayScore = dict[curId][i].score.ft[1];
 
+                let homeColor = getScoreColor(homeScore, awayScore);
+                let awayColor = getScoreColor(awayScore, homeScore);
+
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
 
-                $(score_card).find('#homeScore').css({
-                    'backgroundColor': function () {
-                        if (homeScore < awayScore) {
-                            return 'red';
-                        }
-                        else if (homeScore > awayScore) {
-                            return 'green';
-                        }
-                        else if (homeScore == awayScore) {
-                            return 'grey';
-                        }
-                    }, 'borderColor': function () {
-                        if (homeScore < awayScore) {
-                            return 'red';
-                        }
-                        else if (homeScore > awayScore) {
-                            return 'green';
-                        }
-                        else if (homeScore == awayScore) {
-                            return 'grey';
-                        }
-                    }
-                });
+                $(score_card).find('#homeScore').css('backgroundColor', homeColor);
                 $(score_card).find('#awayScore').css({
                     'backgroundColor': function () {
                         if (homeScore < awayScore) {
