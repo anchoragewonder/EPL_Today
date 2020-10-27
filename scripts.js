@@ -3,7 +3,10 @@ var dict;
 var curId;
 var score_card_prefab;
 var parent;
-var matchNum = 8;
+var matchNum = 28;
+var homeScore;
+var awayScore;
+
 
 // return JSON data from any file path (asynchronous)
 async function getJSON(path) {
@@ -38,6 +41,18 @@ function createJSObject(json) {
 getJSON('https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/en.1.json').then(data => {
     eplMatchlist = data;
 })
+
+function getScoreColor(score1, score2) {
+    let color = '';
+    if (score1 > score2) {
+        color = 'green';
+    } else if (score1 < score2) {
+        color = 'red';
+    } else {
+        color = 'grey';
+    }
+    return color;
+}
 
 $(document).ready(function () {
     score_card_prefab = document.getElementById('card_start').cloneNode(true);
@@ -84,10 +99,18 @@ $(document).ready(function () {
                 let homeScore = dict[curId][i].score.ft[0];
                 let awayScore = dict[curId][i].score.ft[1];
 
+                console.log('home:' + homeScore + 'away:' + awayScore);
+                let homeColor = getScoreColor(homeScore, awayScore);
+                let awayColor = getScoreColor(awayScore, homeScore);
+
+                console.log('home:' + homeColor + 'away:' + awayColor);
+
                 $(score_card).find('#homeScore').text(homeScore);
                 $(score_card).find('#awayScore').text(awayScore);
-            }
 
+                $(score_card).find('#homeScore').css({ 'backgroundColor': homeColor, 'borderColor': homeColor });
+                $(score_card).find('#awayScore').css({ 'backgroundColor': awayColor, 'borderColor': awayColor });
+            }
             parent.appendChild(score_card);
         }
     })
