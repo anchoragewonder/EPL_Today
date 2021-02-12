@@ -1,36 +1,37 @@
 'use strict';
+import { NavItem, NavLink } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav'
 
 class NavList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            list =['Arsenal', 'AstonVilla', 'BrightonandHoveAlbion', 'Burnley', 'Chelsea'
-                , 'CrystalPalace', 'Everton', 'Fulham', 'Leicster', 'LeedsUnited',
-                'Liverpool', 'ManchesterCity', 'ManchesterUnited', 'Newcastle', 'Southhampton',
-                'SheffieldUntied', 'TottenhamHotspur', 'WestBromwichAlbion', 'WestHamUnited',
-                'WolverhamptonWanderers']
+            list =['Arsenal', 'Aston Villa', 'Brighton & Hove Albion', 'Burnley', 'Chelsea'
+                , 'Crystal Palace', 'Everton', 'Fulham', 'Leicster', 'Leeds United',
+                'Liverpool', 'Manchester City', 'Manchester United', 'Newcastle United', 'Southhampton',
+                'Sheffield United', 'Tottenham Hotspur', 'West Bromwich Albion', 'West Ham United',
+                'Wolverhampton Wanderers']
         };
     }
 
     render() {
 
         return (
-            <ul>
-                {this.state.list.map(team => (
-                    <li>
-                        <a>
-                            <div>
-                                <img></img>
-                                <p></p>
+            <Nav id="teamList">
+                {this.state.list.map(team, index => {
+                    <NavItem key={index}>
+                        <NavLink>
+                            <div className="row m-0 justify-content-center">
+                                <img className='logo' src={'assets/logos/' + team.replace(/\s/g, '') + '.png'}></img>
+                                <p>{team}</p>
                             </div>
-                        </a>
-                    </li>
-                ))}
-            </ul>
-
+                        </NavLink>
+                    </NavItem>
+                })}
+            </Nav>
         );
     }
 }
 
-let domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(<LikeButton />, domContainer);
+let domContainer = document.querySelector('#team-selector');
+ReactDOM.render(<NavList />, domContainer);
