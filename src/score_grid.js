@@ -8,6 +8,7 @@ class ScoreGrid extends React.Component {
         };
     }
 
+    // move  this method into parent class and  pass state as props into  score grid
     team_click(selected_team) {
         this.setState({ teamName: selected_team }), () => {
             fetch("https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/" + this.state.teamName)
@@ -19,7 +20,10 @@ class ScoreGrid extends React.Component {
     }
 
     render() {
-
+        // this.matches.map(games index)
+        //      score card 
+        //          homeTeam = games.hometeam
+        //          ect.....
     }
 
 }

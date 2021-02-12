@@ -12,6 +12,7 @@ class NavList extends React.Component {
                 'Sheffield United', 'Tottenham Hotspur', 'West Bromwich Albion', 'West Ham United',
                 'Wolverhampton Wanderers']
         };
+        // create clickme function() to refrence parent handleclick()
     }
 
     render() {
