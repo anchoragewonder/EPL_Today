@@ -19,6 +19,8 @@
   "homepage": "https://github.com/anchoragewonder/EPL_Today#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "babel-preset-react-app": "^3.1.2",
+    "bootstrap": "^4.6.0",
+    "react-bootstrap": "^1.4.3"
   }
 }
