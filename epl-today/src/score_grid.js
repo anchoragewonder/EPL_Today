@@ -16,7 +16,7 @@ export class ScoreGrid extends React.Component {
                         <Row>
                             <div className="home-away-team">
                                 <div className="justify-content-start">
-                                    <img id="homeLogo" src="./assets/logos/Arsenal.png"></img>
+                                    <img id="homeLogo" className="score_logo" src={"./assets/logos/" + games.homeTeam + ".png"}></img>
                                 </div>
                                 <div id="homeName" className="m-auto">
                                     <p>{games.homeTeam}</p>
@@ -27,7 +27,7 @@ export class ScoreGrid extends React.Component {
                             <div id="awayScore">{games.awayScore}</div>
                             <div className="home-away-team">
                                 <div className="justify-content-start">
-                                    <img id="awayLogo" className="score_logo" src="./assets/logos/Chelsea.png"></img>
+                                    <img id="awayLogo" className="score_logo" src={"./assets/logos/" + games.awayTeam + ".png"}></img>
                                 </div>
                                 <div id="awayName" className="m-auto">
                                     <p>{games.awayTeam}</p>

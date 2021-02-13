@@ -7,3 +7,9 @@
 #score_table{
     background-color: aqua;
 }
+
+.score_logo{
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+}
