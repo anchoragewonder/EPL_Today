@@ -19,14 +19,14 @@ export class ScoreGrid extends React.Component {
                             <div>
                                 <div className="home-away-team d-flex flex-row">
                                     <Col className="justify-content-start">
-                                        <img id="homeLogo" src="assets/logos/"></img>
+                                        <img id="homeLogo" src={"../assets/logos/Chelsea.png"}></img>
                                     </Col>
                                     <Col id="homeName" className="m-auto center-text">
                                         <p>{games.homeTeam}</p>
                                     </Col>
                                 </div>
                                 <div id="homeScore">{games.homeScore}</div>
-                                <div id="date"></div>
+                                <div id="date">{games.date}</div>
                                 <div id="awayScore">{games.awayScore}</div>
                                 <div className="home-away-team d-flex flex-row">
                                     <Col className="justify-content-start">

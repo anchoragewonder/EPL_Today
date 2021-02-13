@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   teamFetchMatch() {
-    fetch("https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/" + this.state.teamName)
+    fetch("https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/Chelsea")
       .then(response => response.json())
       .then(data => {
         this.setState({ matches: data })
@@ -25,6 +25,7 @@ class App extends React.Component {
   }
 
   render() {
+    { this.teamFetchMatch() }
     return (
       <div className="App">
         <header className="App-header">

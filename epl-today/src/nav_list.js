@@ -28,7 +28,7 @@ export class NavList extends React.Component {
                     <NavItem>
                         <NavLink id={team} onClick={() => this.clickedTeam(this.id.replace(/\s/g, ''))}>
                             <div className="row m-0 justify-content-center">
-                                <img className='logo' src={'assets/logos/' + team.replace(/\s/g, '') + '.png'}></img>
+                                <img className='logo' src={"./assets/logos/" + team.replace(/\s/g, '') + '.png'}></img>
                                 <p>{team}</p>
                             </div>
                         </NavLink>
