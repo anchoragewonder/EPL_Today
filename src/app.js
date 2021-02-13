@@ -35,3 +35,5 @@ export class App extends React.Component {
         );
     }
 }
+let domContainer = document.querySelector('#root');
+ReactDOM.render(<App />, domContainer);
