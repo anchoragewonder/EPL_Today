@@ -8,65 +8,32 @@ export class NavList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            list: ['Arsenal', 'Aston Villa', 'Brighton & Hove Albion', 'Burnley', 'Chelsea',
-                'Crystal Palace', 'Everton', 'Fulham', 'Leicster', 'Leeds United',
-                'Liverpool', 'Manchester City', 'Manchester United', 'Newcastle United', 'Southhampton',
+            list: [
+                'Arsenal', 'Aston Villa', 'Burnley', 'Chelsea', 'Crystal Palace',
+                'Everton', 'Fulham', 'Leicester City', 'Leeds United', 'Liverpool',
+                'Manchester City', 'Manchester United', 'Newcastle United', 'Southampton',
                 'Sheffield United', 'Tottenham Hotspur', 'West Bromwich Albion', 'West Ham United',
-                'Wolverhampton Wanderers'],
+                'Wolverhampton Wanderers',
+            ],
             selected: false,
         };
     }
 
-    clickedTeam(id) {
-        this.props.getTeam(id);
-        this.setState({ selected: true });
-    }
+    /*changeBackground(e) {
+        e.target.style.background = 'grey';
+    } find different hover event handlers this is a permanent change to the state not a temporary one*/
 
     render() {
-        const team = this.state.list
 
         return (
-            <Navbar expand="sm" variant="dark" bg="dark">
-                <Nav className="mr-auto" style={{ display: "flex", flexDirection: "row" }}>
-
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[0].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[0]}</p>
+            <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll" }}>
+                {this.state.list.map((teamName, index) => (
+                    <NavItem key={index} style={{ margin: "10px 10px 5px" }} onClick={() => this.props.action(teamName)}>
+                        <img src={"/assets/logos/" + teamName.replace(/\s/g, '') + ".png"}></img>
+                        <p>{teamName}</p>
                     </NavItem>
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[1].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[1]}</p>
-                    </NavItem>
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[3].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[3]}</p>
-                    </NavItem>
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[4].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[4]}</p>
-                    </NavItem>
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[5].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[5]}</p>
-                    </NavItem>
-                    <NavItem >
-                        <img src={"/assets/logos/" + team[6].replace(/\s/g, '') + ".png"}></img>
-                        <p>{team[6]}</p>
-                    </NavItem>
-
-                </Nav>
-            </Navbar>
+                ))}
+            </div>
         );
     }
 }
-
-//{this.state.list.map((team) => {
-    //<NavItem>
-        //<NavLink id={team} onClick={() => this.clickedTeam(this.id.replace(/\s/g, ''))}>
-            //<div className="row m-0 justify-content-center">
-                //<img className='logo' src={"../assets/logos/" + team.replace(/\s/g, '') + '.png'}></img>
-                //<p>{team}</p>
-            //</div>
-        //</NavLink>
-    //</NavItem> <img src={"/assets/logos/" + this.state.list[index].replace(/\s/g, '') + ".png"}></img>
-//})}
