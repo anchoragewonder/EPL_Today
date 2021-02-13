@@ -1,4 +1,6 @@
 'use strict';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { NavList } from './nav_list';
 import { ScoreGrid } from './score_grid';
 

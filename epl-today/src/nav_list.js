@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import { NavItem, NavLink } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
@@ -39,4 +38,3 @@ export class NavList extends React.Component {
         );
     }
 }
-
