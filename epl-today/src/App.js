@@ -30,8 +30,8 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <NavList getTeam={this.getTeam} />
-          <h1 class="text-header">THIS IS EPL TODAY</h1>
-          <h2 class="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
+          <h1 className="text-header">THIS IS EPL TODAY</h1>
+          <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
         <main>
           <ScoreGrid teamMatches={this.state.matches} />

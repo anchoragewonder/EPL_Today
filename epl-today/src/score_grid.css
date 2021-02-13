@@ -1,0 +1,9 @@
+.home-away-team{
+    max-height: 75px;
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+
+#score_table{
+    background-color: aqua;
+}
