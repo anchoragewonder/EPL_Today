@@ -24,8 +24,8 @@ export class NavList extends React.Component {
 
         return (
             <Nav id="teamList">
-                {this.state.list.map(team, index => {
-                    <NavItem key={index}>
+                {this.state.list.map((team) => {
+                    <NavItem>
                         <NavLink id={team} onClick={() => this.clickedTeam(this.id.replace(/\s/g, ''))}>
                             <div className="row m-0 justify-content-center">
                                 <img className='logo' src={'assets/logos/' + team.replace(/\s/g, '') + '.png'}></img>

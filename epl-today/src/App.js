@@ -1,9 +1,9 @@
-
+import React from 'react';
 import './App.css';
 import { NavList } from './nav_list';
 import { ScoreGrid } from './score_grid';
 
-export class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ export class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavList {...this.props, getTeam = this.getTeam} />
+          <NavList getTeam={this.getTeam} />
           <h1 class="text-header">THIS IS EPL TODAY</h1>
           <h2 class="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
@@ -39,3 +39,8 @@ export class App extends React.Component {
     );
   }
 }
+
+export default App;
+
+
+
