@@ -2,6 +2,7 @@ import React from 'react';
 import { NavItem, NavLink } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container';
 
 export class NavList extends React.Component {
     constructor(props) {
@@ -23,20 +24,37 @@ export class NavList extends React.Component {
 
     render() {
         const team = this.state.list
+
         return (
-            <Navbar expand="lg" variant="light" bg="light" id="nav_start">
-                <Nav.Link>
-                    <img src={"/assets/logos/" + team[0] + ".png"}></img>
-                    <p>{team[0]}</p>
-                </Nav.Link>
-                <NavItem>
-                    <img src={"/assets/logos/" + team[1].replace(/\s/g, '') + ".png"}></img>
-                    <p>{team[1]}</p>
-                </NavItem>
-                <NavItem>
-                    <img src="/assets/logos/Arsenal.png"></img>
-                    <p>{team[2]}</p>
-                </NavItem>
+            <Navbar expand="sm" variant="dark" bg="dark">
+                <Nav className="mr-auto" style={{ display: "flex", flexDirection: "row" }}>
+
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[0].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[0]}</p>
+                    </NavItem>
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[1].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[1]}</p>
+                    </NavItem>
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[3].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[3]}</p>
+                    </NavItem>
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[4].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[4]}</p>
+                    </NavItem>
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[5].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[5]}</p>
+                    </NavItem>
+                    <NavItem >
+                        <img src={"/assets/logos/" + team[6].replace(/\s/g, '') + ".png"}></img>
+                        <p>{team[6]}</p>
+                    </NavItem>
+
+                </Nav>
             </Navbar>
         );
     }
@@ -50,5 +68,5 @@ export class NavList extends React.Component {
                 //<p>{team}</p>
             //</div>
         //</NavLink>
-    //</NavItem>
+    //</NavItem> <img src={"/assets/logos/" + this.state.list[index].replace(/\s/g, '') + ".png"}></img>
 //})}

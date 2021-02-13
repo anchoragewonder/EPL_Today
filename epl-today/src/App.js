@@ -28,14 +28,12 @@ class App extends React.Component {
     { this.teamFetchMatch() }
     return (
       <div className="App">
+        <NavList getTeam={this.getTeam} />
         <header className="App-header">
-          <NavList getTeam={this.getTeam} />
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <main>
-          <ScoreGrid teamMatches={this.state.matches} />
-        </main>
+        <ScoreGrid teamMatches={this.state.matches} />
       </div>
     );
   }
