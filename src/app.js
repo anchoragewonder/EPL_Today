@@ -1,23 +1,37 @@
 'use strict';
+import { NavList } from './nav_list';
+import { ScoreGrid } from './score_grid';
 
-class LikeButton extends React.Component {
+export class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { liked: false };
+        this.state = {
+            teamName: "",
+            matches: [],
+        };
+    }
+
+    getTeam = (navData) => {
+        this.setState({ teamName: navData })
+    }
+
+
+    teamFetchMatch() {
+        fetch("https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/" + this.state.teamName)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ matches: data })
+            })
     }
 
     render() {
-        if (this.state.liked) {
-            return 'You liked this.';
-        }
 
         return (
-            <button onClick={() => this.setState({ liked: true })}>
-                Like
-            </button>
+            <div>
+                <NavList {...this.props, getTeam = this.getTeam} />
+                <ScoreGrid teamMatches={this.state.matches} />
+            </div>
+
         );
     }
 }
-
-let domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(<LikeButton />, domContainer);

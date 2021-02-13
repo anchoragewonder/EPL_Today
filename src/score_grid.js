@@ -1,29 +1,46 @@
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
-class ScoreGrid extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            teamName="",
-            matches=[],
-        };
-    }
-
-    // move  this method into parent class and  pass state as props into  score grid
-    team_click(selected_team) {
-        this.setState({ teamName: selected_team }), () => {
-            fetch("https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/" + this.state.teamName)
-                .then(response => response.json())
-                .then(data => {
-                    this.setState({ matches: data })
-                })
-        }
-    }
+export class ScoreGrid extends React.Component {
 
     render() {
-        // this.matches.map(games index) 
-        //      score card 
-        //          homeTeam = games.hometeam
-        //          ect.....
+        return (
+            <Container id="score_table">
+                {this.props.teamMatches.map((games, index) => (
+                    <Card
+                        key={index}
+                        bg="light"
+                        text="dark"
+                        style={{ width: '75%' }}
+                        className="mb-3 rounded_pill">
+                        <Card.Body>
+                            <div>
+                                <div className="home-away-team d-flex flex-row">
+                                    <Col className="justify-content-start">
+                                        <img id="homeLogo" src="assets/logos/"></img>
+                                    </Col>
+                                    <Col id="homeName" className="m-auto center-text">
+                                        <p>{games.homeTeam}</p>
+                                    </Col>
+                                </div>
+                                <div id="homeScore">{games.homeScore}</div>
+                                <div id="date"></div>
+                                <div id="awayScore">{games.awayScore}</div>
+                                <div className="home-away-team d-flex flex-row">
+                                    <Col className="justify-content-start">
+                                        <img id="awayLogo" src="assets/logos/"></img>
+                                    </Col>
+                                    <Col id="awayName" className="m-auto center-text">
+                                        <p>{games.awayTeam}</p>
+                                    </Col>
+                                </div>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                ))}
+            </Container>
+        );
     }
 
 }
