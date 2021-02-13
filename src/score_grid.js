@@ -20,7 +20,7 @@ class ScoreGrid extends React.Component {
     }
 
     render() {
-        // this.matches.map(games index)
+        // this.matches.map(games index) 
         //      score card 
         //          homeTeam = games.hometeam
         //          ect.....
