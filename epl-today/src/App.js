@@ -10,11 +10,38 @@ class App extends React.Component {
 
     this.state = {
       matches: [],
+      staringTeam: "",
+      list: [
+        { id: 'Arsenal', name: 'Arsenal' },
+        { id: 'AstonVilla', name: 'Aston Villa' },
+        { id: 'Burnley', name: 'Burnley' },
+        { id: 'BrightonandHoveAlbion', name: 'Brighton & Hove Albion' },
+        { id: 'Chelsea', name: 'Chelsea' },
+        { id: 'CrystalPalace', name: 'Crystal Palace' },
+        { id: 'Everton', name: 'Everton' },
+        { id: 'Fulham', name: 'Fulham' },
+        { id: 'LeicesterCity', name: 'Leicester City' },
+        { id: 'LeedsUnited', name: 'Leeds United' },
+        { id: 'Liverpool', name: 'Liverpool' },
+        { id: 'ManchesterCity', name: 'Manchester City' },
+        { id: 'ManchesterUnited', name: 'Manchester United' },
+        { id: 'NewcastleUnited', name: 'Newcastle United' },
+        { id: 'Southampton', name: 'Southampton' },
+        { id: 'SheffieldUnited', name: 'Sheffield United' },
+        { id: 'TottenhamHotspur', name: 'Tottenham Hotspur' },
+        { id: 'WestBromwichAlbion', name: 'West Bromwich Albion' },
+        { id: 'WestHamUnited', name: 'West Ham United' },
+        { id: 'WolverhamptonWanderers', name: 'Wolverhampton Wanderers' },
+      ],
     };
+
+    this.setStartingTeam();
+
   }
 
   getTeam(team) {
-    console.log(team);
+    localStorage.setItem('team', team);
+    this.state.staringTeam = team;
     fetch(`https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/${team.replace(/\s/g, '')}`)
       .then(response => response.json())
       .then(data => {
@@ -22,16 +49,24 @@ class App extends React.Component {
       })
   }
 
+  setStartingTeam() {
+    let storage_team = localStorage.getItem('team')
+    if (storage_team && !this.state.staringTeam) {
+      this.setState({ staringTeam: storage_team });
+      this.getTeam(storage_team);
+    }
+    return storage_team;
+  }
 
   render() {
     return (
       <div className="App">
-        <NavList action={this.getTeam} />
+        <NavList action={this.getTeam} idMatcher={this.state.list} />
         <header className="App-header">
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid teamMatches={this.state.matches} />
+        <ScoreGrid teamMatches={this.state.matches} idMatcher={this.state.list} />
       </div>
     );
   }

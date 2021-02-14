@@ -8,37 +8,44 @@ import "./score_grid.css";
 
 export class ScoreGrid extends React.Component {
 
+    getFullName(name) {
+        return this.props.idMatcher.map((i) => {
+            if (i.id.toLowerCase() == name.toLowerCase()) {
+                return i.name;
+            }
+        });
+    }
+
     render() {
         return (
-            <div id="score_table">
-                {this.props.teamMatches.map((games) => (
-                    <Container>
-                        <Row>
-                            <div className="home-away-team">
-                                <div className="justify-content-start">
+            <div id="score_table" style={{ margin: "auto" }}>
+                {this.props.teamMatches.map((games, index) => (
+                    <Card key={index} style={{ margin: "0 auto", marginBottom: "1rem", maxWidth: "1200px", bg: "light", backgroundColor: "white", minHeight: "75px" }}>
+                        <div id="score_start" style={{ flexFlow: "row", display: "flex" }}>
+                            <div className="home-away-team" style={{ display: "flex", flex: "row" }}>
+                                <Col style={{ justifyContent: "start" }}>
                                     <img id="homeLogo" className="score_logo" src={"./assets/logos/" + games.homeTeam + ".png"}></img>
-                                </div>
-                                <div id="homeName" className="m-auto">
-                                    <p>{games.homeTeam}</p>
-                                </div>
+                                </Col>
+                                <Col id="homeName" style={{ margin: "auto", justifyContent: "start" }}>
+                                    <p>{this.getFullName(games.homeTeam)}</p>
+                                </Col>
                             </div>
-                            <div id="homeScore">{games.homeScore}</div>
-                            <div id="date">{games.date}</div>
-                            <div id="awayScore">{games.awayScore}</div>
-                            <div className="home-away-team">
-                                <div className="justify-content-start">
+                            <div id="homeScore" style={{ display: "flex", flexFlow: "column", margin: "auto", flexShrink: "0" }}>{games.homeScore}</div>
+                            <div id="date" style={{ display: "flex", flexFlow: "column", margin: "auto", flexShrink: "0" }}>{games.date}</div>
+                            <div id="awayScore" style={{ display: "flex", flexFlow: "column", margin: "auto", flexShrink: "0" }}>{games.awayScore}</div>
+                            <div className="home-away-team" style={{ display: "flex", flex: "row" }}>
+                                <Col style={{ justifyContent: "start" }}>
                                     <img id="awayLogo" className="score_logo" src={"./assets/logos/" + games.awayTeam + ".png"}></img>
-                                </div>
-                                <div id="awayName" className="m-auto">
-                                    <p>{games.awayTeam}</p>
-                                </div>
+                                </Col>
+                                <Col id="awayName" style={{ margin: "auto", justifyContent: "start" }}>
+                                    <p>{this.getFullName(games.awayTeam)}</p>
+                                </Col>
                             </div>
-                        </Row>
-                    </Container>
-                ))}
+                        </div>
+                    </Card>
+                ))
+                }
             </div>
         );
     }
-
 }
-
