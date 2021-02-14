@@ -16,10 +16,8 @@ export class NavList extends React.Component {
             <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll", backgroundColor: "white" }}>
                 {this.props.idMatcher.map((teamName, index) => (
                     <NavItem key={index} style={{ margin: "15px 20px 5px" }} onClick={() => this.props.action(teamName.id)}>
-                        <Link to="score_table" smooth={true}>
-                            <img src={"/assets/logos/" + teamName.id + ".png"} style={{ width: "70px", height: '70px' }}></img>
-                            <p>{teamName.name}</p>
-                        </Link>
+                        <img src={"/assets/logos/" + teamName.id + ".png"} style={{ width: "70px", height: '70px' }}></img>
+                        <p>{teamName.name}</p>
                     </NavItem>
                 ))}
             </div>

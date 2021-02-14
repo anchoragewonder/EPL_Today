@@ -7,8 +7,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.getTeam = this.getTeam.bind(this);
-    this.scoreSection = React.createRef();
-
 
     this.state = {
       matches: [],
@@ -49,8 +47,6 @@ class App extends React.Component {
       .then(data => {
         this.setState({ matches: data })
       })
-
-    this.scoreSection.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   setStartingTeam() {
@@ -70,7 +66,7 @@ class App extends React.Component {
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid ref={this.scoreSection} teamMatches={this.state.matches} idMatcher={this.state.list} />
+        <ScoreGrid teamMatches={this.state.matches} idMatcher={this.state.list} />
       </div>
     );
   }
