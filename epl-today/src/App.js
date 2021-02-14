@@ -7,10 +7,12 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.getTeam = this.getTeam.bind(this);
+    this.scoreSection = React.createRef();
+
 
     this.state = {
       matches: [],
-      staringTeam: "",
+      startingTeam: "",
       list: [
         { id: 'Arsenal', name: 'Arsenal' },
         { id: 'AstonVilla', name: 'Aston Villa' },
@@ -36,23 +38,25 @@ class App extends React.Component {
     };
 
     this.setStartingTeam();
-
   }
 
   getTeam(team) {
     localStorage.setItem('team', team);
-    this.state.staringTeam = team;
+    this.state.startingTeam = team;
+
     fetch(`https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/${team.replace(/\s/g, '')}`)
       .then(response => response.json())
       .then(data => {
         this.setState({ matches: data })
       })
+
+    this.scoreSection.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   setStartingTeam() {
     let storage_team = localStorage.getItem('team')
-    if (storage_team && !this.state.staringTeam) {
-      this.setState({ staringTeam: storage_team });
+    if (storage_team && !this.state.startingTeam) {
+      this.setState({ startingTeam: storage_team });
       this.getTeam(storage_team);
     }
     return storage_team;
@@ -66,7 +70,7 @@ class App extends React.Component {
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid teamMatches={this.state.matches} idMatcher={this.state.list} />
+        <ScoreGrid ref={this.scoreSection} teamMatches={this.state.matches} idMatcher={this.state.list} />
       </div>
     );
   }
