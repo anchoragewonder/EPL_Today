@@ -16,7 +16,7 @@ class App extends React.Component {
         { id: 'Arsenal', name: 'Arsenal' },
         { id: 'AstonVilla', name: 'Aston Villa' },
         { id: 'Burnley', name: 'Burnley' },
-        { id: 'BrightonandHoveAlbion', name: 'Brighton & Hove Albion' },
+        { id: 'BrightonandHoveAlbion', name: 'Brighton' },
         { id: 'Chelsea', name: 'Chelsea' },
         { id: 'CrystalPalace', name: 'Crystal Palace' },
         { id: 'Everton', name: 'Everton' },
@@ -29,10 +29,10 @@ class App extends React.Component {
         { id: 'NewcastleUnited', name: 'Newcastle United' },
         { id: 'Southampton', name: 'Southampton' },
         { id: 'SheffieldUnited', name: 'Sheffield United' },
-        { id: 'TottenhamHotspur', name: 'Tottenham Hotspur' },
-        { id: 'WestBromwichAlbion', name: 'West Bromwich Albion' },
-        { id: 'WestHamUnited', name: 'West Ham United' },
-        { id: 'WolverhamptonWanderers', name: 'Wolverhampton Wanderers' },
+        { id: 'TottenhamHotspur', name: 'Tottenham' },
+        { id: 'WestBromwichAlbion', name: 'West Brom' },
+        { id: 'WestHamUnited', name: 'West Ham' },
+        { id: 'WolverhamptonWanderers', name: 'Wolves' },
       ],
     };
 
