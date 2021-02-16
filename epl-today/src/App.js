@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.getTeam = this.getTeam.bind(this);
+    this.refScore = React.createRef();
 
     this.state = {
       matches: [],
@@ -61,12 +62,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavList action={this.getTeam} idMatcher={this.state.list} />
+        <NavList forwardRef={this.refScore} action={this.getTeam} idMatcher={this.state.list} />
         <header className="App-header">
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid teamMatches={this.state.matches} idMatcher={this.state.list} />
+        <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} />
       </div>
     );
   }
