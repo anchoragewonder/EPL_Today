@@ -1,0 +1,92 @@
+.card_style{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 1200px; 
+    background-color: white;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+}
+
+.home-away-team{
+    max-height: 75px;
+    flex-shrink: 0;
+    flex-basis: 180px;
+    display: flex;
+    flex: row;
+    align-items: center;
+}
+
+.logo_score_style{
+    justify-content: start;
+}
+
+.name_style{
+    margin: auto;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.score_style{
+    display: flex;
+    flex-flow: column;
+    margin: auto; 
+    flex-shrink: 0;
+    color: white;  
+}
+
+.score-logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 'auto';
+    margin-right: 'auto';
+    display: block;
+}
+
+#date{
+    display: flex;
+    flex-flow: column;
+    margin: auto; 
+    flex-shrink: 0;
+}
+
+#score_table{
+    background-color: #282c34;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .home-away-team{
+        max-height: 100px;
+        flex-basis: 120px;
+    }
+
+    .logo_score_style{
+        margin-left: 10px;
+    }
+
+    .score-logo{
+        width: 25px;
+        height: 25px;
+    }
+
+    .score_style{
+        font-size: 10px;
+    }
+
+    .team-text{
+        font-size: 10px;
+    }
+    
+    #awayName{
+        padding-left: 0px;
+    }
+
+    #date{
+            font-size: 10px;
+        }
+    
+} 
+    
