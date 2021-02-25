@@ -21,8 +21,9 @@ export class ScoreGrid extends React.Component {
         });
     }
 
-    scrollToScore() {
-        this.tableRef.current.scrollIntoView({ behavior: 'smooth' })
+    componentDidUpdate() {
+        const element = this.tableRef.current;
+        element.scrollIntoView({ behavior: 'smooth' })
     }
 
     render() {

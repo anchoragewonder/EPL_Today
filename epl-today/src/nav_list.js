@@ -12,7 +12,7 @@ export class NavList extends React.Component {
     }
 
     clickMe() {
-        this.props.forwardRef.current.scrollToScore();
+        this.props.forwardRef.current.componentDidUpdate();
     }
 
     render() {
