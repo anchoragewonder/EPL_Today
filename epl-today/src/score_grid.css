@@ -1,4 +1,10 @@
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}
 
 .home-away-team{
     display: flex;
@@ -12,9 +18,11 @@
 }
 
 .match-container {
-    border-bottom: grey solid 2px;
+    border-bottom: rgba(177, 177, 177, 0.3) solid 2px;
     margin-bottom: 1em;
     padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -22,8 +30,8 @@
 .score_style{
     display: flex;
     flex-flow: column;
+    width: 80px;
     margin: auto; 
-    flex-shrink: 0;
     color: white;  
 }
 
@@ -39,6 +47,12 @@
     margin: 0;
 }
 
+#col-style {
+    background: #282c34;
+    padding-right: 4rem;
+    
+}
+
 #date{
     display: flex;
     flex-flow: column;
@@ -46,8 +60,60 @@
     flex-shrink: 0;
 }
 
+#match-data {
+    flex-grow: 1;
+}
+
 #score_table{
-    background:beige;
+    background:rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    
+}
+
+#score_table::-webkit-scrollbar {
+    width: 1em;
+}
+   
+#score_table::-webkit-scrollbar-track {
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+#score_table::-webkit-scrollbar-thumb {
+    background-color: rgb(51, 51, 51);
+    outline: 1px solid rgb(134, 134, 134);
+}
+
+#score-header {
+    margin-bottom: 2rem;
+    border-bottom: dotted rgba(0, 0, 0, 0.288) 2px;
+    padding-top: 2rem;
+}
+
+#sidebar {
+    text-align: center;
+    padding-left: 1em;
+    background-color: #282c34;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+#side-team-header {
+    padding-top: 2rem;
+   
+}
+
+#side-team-logo {
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+}
+
+#top-row{
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
