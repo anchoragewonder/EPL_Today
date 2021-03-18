@@ -13,26 +13,26 @@ class App extends React.Component {
       matches: [],
       startingTeam: "",
       list: [
-        { id: 'Arsenal', name: 'Arsenal' },
-        { id: 'AstonVilla', name: 'Aston Villa' },
-        { id: 'Burnley', name: 'Burnley' },
-        { id: 'BrightonandHoveAlbion', name: 'Brighton' },
-        { id: 'Chelsea', name: 'Chelsea' },
-        { id: 'CrystalPalace', name: 'Crystal Palace' },
-        { id: 'Everton', name: 'Everton' },
-        { id: 'Fulham', name: 'Fulham' },
-        { id: 'LeicesterCity', name: 'Leicester City' },
-        { id: 'LeedsUnited', name: 'Leeds United' },
-        { id: 'Liverpool', name: 'Liverpool' },
-        { id: 'ManchesterCity', name: 'Manchester City' },
-        { id: 'ManchesterUnited', name: 'Manchester United' },
-        { id: 'NewcastleUnited', name: 'Newcastle United' },
-        { id: 'Southampton', name: 'Southampton' },
-        { id: 'SheffieldUnited', name: 'Sheffield United' },
-        { id: 'TottenhamHotspur', name: 'Tottenham' },
-        { id: 'WestBromwichAlbion', name: 'West Brom' },
-        { id: 'WestHamUnited', name: 'West Ham' },
-        { id: 'WolverhamptonWanderers', name: 'Wolves' },
+        { id: 'Arsenal', name: 'Arsenal', color: "#de1118" },
+        { id: 'AstonVilla', name: 'Aston Villa', color: "#911a34" },
+        { id: 'Burnley', name: 'Burnley', color: "#911a34" },
+        { id: 'BrightonandHoveAlbion', name: 'Brighton', color: "#3572c2" },
+        { id: 'Chelsea', name: 'Chelsea', color: "#0a2c6e" },
+        { id: 'CrystalPalace', name: 'Crystal Palace', color: "#de1118" },
+        { id: 'Everton', name: 'Everton', color: "#de1118" },
+        { id: 'Fulham', name: 'Fulham', color: "#de1118" },
+        { id: 'LeicesterCity', name: 'Leicester City', color: "#de1118" },
+        { id: 'LeedsUnited', name: 'Leeds United', color: "#de1118" },
+        { id: 'Liverpool', name: 'Liverpool', color: "#de1118" },
+        { id: 'ManchesterCity', name: 'Manchester City', color: "#3572c2" },
+        { id: 'ManchesterUnited', name: 'Manchester United', color: "#de1118" },
+        { id: 'NewcastleUnited', name: 'Newcastle United', color: "#de1118" },
+        { id: 'Southampton', name: 'Southampton', color: "#de1118" },
+        { id: 'SheffieldUnited', name: 'Sheffield United', color: "#de1118" },
+        { id: 'TottenhamHotspur', name: 'Tottenham', color: "#de1118" },
+        { id: 'WestBromwichAlbion', name: 'West Brom', color: "#de1118" },
+        { id: 'WestHamUnited', name: 'West Ham', color: "#de1118" },
+        { id: 'WolverhamptonWanderers', name: 'Wolves', color: "#de1118" },
       ],
     };
 
@@ -67,7 +67,7 @@ class App extends React.Component {
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} />
+        <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} />
       </div>
     );
   }
