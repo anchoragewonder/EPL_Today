@@ -37,7 +37,7 @@ export class ScoreGrid extends React.Component {
         const teamColor = this.getTeamColor(this.props.teamName);
 
         const divStyle = {
-            height: "45vh",
+            height: "60vh",
             background: teamColor,
             color: "white"
         };
