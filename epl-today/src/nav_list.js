@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavItem, NavLink } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Link from 'react-scroll';
+import './nav_list.css';
 
 export class NavList extends React.Component {
     constructor(props) {
@@ -18,7 +16,7 @@ export class NavList extends React.Component {
     render() {
 
         return (
-            <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll", backgroundColor: "white" }}>
+            <div className="nav-scroll">
                 {this.props.idMatcher.map((teamName, index) => (
                     <NavItem key={index} style={{ margin: "15px 20px 5px" }} onClick={() => { this.props.action(teamName.id); this.clickMe() }}>
                         <img src={"/assets/logos/" + teamName.id + ".png"} style={{ width: "70px", height: '70px' }}></img>
