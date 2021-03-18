@@ -1,3 +1,23 @@
-#nav_start{
+
+.nav-scroll{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
     overflow-x: scroll;
+    background: white; 
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.nav-scroll::-webkit-scrollbar {
+    width: 1em;
+}
+   
+.nav-scroll::-webkit-scrollbar-track {
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.nav-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(153, 153, 153);
 }
