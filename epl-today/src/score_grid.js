@@ -37,7 +37,7 @@ export class ScoreGrid extends React.Component {
         const teamColor = this.getTeamColor(this.props.teamName);
 
         const divStyle = {
-            height: "60vh",
+            height: "80vh",
             background: teamColor,
             color: "white"
         };
@@ -45,15 +45,15 @@ export class ScoreGrid extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col md={3} id="sidebar">
+                    <Col md={12} lg={3} id="sidebar">
                         <div style={divStyle}>
                             <h3 id="side-team-header">{this.getFullName(this.props.teamName)}</h3>
                             <img id="side-team-logo" src={'./assets/logos-big/' + this.props.teamName + '.png'}></img>
                         </div>
 
                     </Col>
-                    <Col id="col-style" md={9} >
-                        <a class='anchor' ref={this.tableRef}></a>
+                    <Col id="col-style" md={12} lg={9} >
+                        <a className='anchor' ref={this.tableRef}></a>
                         <div id="score_table" style={{ margin: "auto", }}>
                             <h2 id="score-header">RESULTS</h2>
                             {this.props.teamMatches.map((match, index) => (
