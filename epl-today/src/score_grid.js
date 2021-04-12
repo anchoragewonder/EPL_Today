@@ -37,23 +37,21 @@ export class ScoreGrid extends React.Component {
         const teamColor = this.getTeamColor(this.props.teamName);
 
         const divStyle = {
-            height: "80vh",
             background: teamColor,
-            color: "white"
         };
 
         return (
             <Container fluid>
                 <Row>
                     <Col md={12} lg={3} id="sidebar">
-                        <div style={divStyle}>
+                        <a className='anchor' ref={this.tableRef}></a>
+                        <div id="sidebar-banner" style={divStyle}>
                             <h3 id="side-team-header">{this.getFullName(this.props.teamName)}</h3>
                             <img id="side-team-logo" src={'./assets/logos-big/' + this.props.teamName + '.png'}></img>
                         </div>
 
                     </Col>
                     <Col id="col-style" md={12} lg={9} >
-                        <a className='anchor' ref={this.tableRef}></a>
                         <div id="score_table" style={{ margin: "auto", }}>
                             <h2 id="score-header">RESULTS</h2>
                             {this.props.teamMatches.map((match, index) => (
@@ -66,7 +64,7 @@ export class ScoreGrid extends React.Component {
                                             <Col id="homeName">
                                                 <p className="team-text">{this.getFullName(match.homeTeam)}</p>
                                             </Col>
-                                            <Col>
+                                            <Col id="home-score">
                                                 <GetScoreWithColor score={match.homeScore} match={match} />
                                             </Col>
                                         </Row>
@@ -78,7 +76,7 @@ export class ScoreGrid extends React.Component {
                                             <Col id="awayName">
                                                 <p className="team-text">{this.getFullName(match.awayTeam)}</p>
                                             </Col>
-                                            <Col>
+                                            <Col id="away-score">
                                                 <GetScoreWithColor score={match.awayScore} match={match} />
                                             </Col>
                                         </Row>

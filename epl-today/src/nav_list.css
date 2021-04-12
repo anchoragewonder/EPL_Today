@@ -8,6 +8,7 @@
     position: sticky;
     top:0;
     z-index: 999;
+    height: 20vh;
 }
 
 .nav-scroll::-webkit-scrollbar {
@@ -15,9 +16,16 @@
 }
    
 .nav-scroll::-webkit-scrollbar-track {
-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
    
 .nav-scroll::-webkit-scrollbar-thumb {
     background-color: rgb(153, 153, 153);
+}
+
+@media only screen and (max-width: 578px) {
+   
+    .nav-scroll{
+        height: 25vh;
+    }
 }

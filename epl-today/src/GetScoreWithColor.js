@@ -14,7 +14,7 @@ export function GetScoreWithColor(props) {
         color = getColorHelper(props.score, props.match.awayScore);
     }
 
-    return (<div id="score" className="score_style" style={{ backgroundColor: color, border: "5px solid", borderColor: color, borderRadius: "2rem" }}>{props.score}</div>);
+    return (<div className="score_style" style={{ backgroundColor: color, border: "5px solid", borderColor: color, borderRadius: "1rem" }}>{props.score}</div>);
 }
 
 function getColorHelper(score1, score2) {

@@ -2,7 +2,7 @@
 a.anchor {
     display: block;
     position: relative;
-    top: -200px;
+    top:-20vh;
     visibility: hidden;
 }
 
@@ -77,7 +77,7 @@ a.anchor {
 }
    
 #score_table::-webkit-scrollbar-track {
-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
    
 #score_table::-webkit-scrollbar-thumb {
@@ -100,6 +100,11 @@ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     height: 100vh;
 }
 
+#sidebar-banner{
+    height: 70vh;
+    color: white;
+}
+
 #side-team-header {
     padding-top: 2rem;
     font-size: 2rem;
@@ -116,10 +121,92 @@ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
+   
+
+}
+    
+@media only screen and (max-width: 768px) {
 
     .logo_score_style{
         margin-left: 10px;
+    }
+
+    .score-logo{
+        width: 35px;
+        height: 35px;
+    }
+
+    .score_style{
+        font-size: 16px;
+    }
+
+    .team-text{
+        font-size: 16px;
+    }
+    
+    #awayName{
+        padding-left: 0px;
+    }
+
+    #homeName{
+        padding-left: 0px
+    }
+
+    #col-style{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    #date{
+        font-size: 16px;
+    }
+
+    #sidebar{
+        padding-right: 0rem;
+        padding-left: 0rem;
+        height: 20vh;
+        box-shadow: 4px 2px;
+    }
+
+    #side-team-logo{
+        width: 125px;
+        height: 125px;
+        margin-top: 1rem;
+    }
+
+    #score_table{
+        padding-right: 0rem;
+        height: 60vh;
+    }
+
+    #side-team-header{
+        padding-top: 1rem;
+    }
+    
+} 
+
+@media only screen and (max-width: 578px) {
+   
+    a.anchor {
+        top:-25vh;
+    }
+
+    #score_table{
+        height: 55vh;
+    }
+    
+    #side-team-header{
+        font-size: 1.5rem;
+    }
+
+    #side-team-logo{
+        width: 70px;
+        height: 70px;
+    }
+
+    #sidebar{
+        height: 20vh;
     }
 
     .score-logo{
@@ -128,24 +215,22 @@ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     }
 
     .score_style{
-        font-size: 10px;
+        font-size: 12px;
+        width: 60px;
     }
 
     .team-text{
-        font-size: 10px;
+        font-size: 12px;
     }
     
-    #awayName{
-        padding-left: 0px;
-    }
-
-    #col-style{
-        padding-right: 1rem;
+    .logo_score_style{
+        margin-left: 5px;
     }
 
     #date{
-            font-size: 10px;
-        }
-    
-} 
+        font-size: 12px;
+    }
+
+
+}
     
