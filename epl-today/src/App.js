@@ -12,6 +12,7 @@ class App extends React.Component {
     this.state = {
       matches: [],
       startingTeam: "",
+      teamSelected: false,
       list: [
         { id: 'Arsenal', name: 'Arsenal', color: "#cc0000" },
         { id: 'AstonVilla', name: 'Aston Villa', color: "#911a34" },
@@ -54,12 +55,15 @@ class App extends React.Component {
     let storage_team = localStorage.getItem('team')
     if (storage_team && !this.state.startingTeam) {
       this.setState({ startingTeam: storage_team });
+      this.setState({ teamSelected: true })
       this.getTeam(storage_team);
     }
     return storage_team;
   }
 
   render() {
+
+
     return (
       <div className="App">
         <NavList forwardRef={this.refScore} action={this.getTeam} idMatcher={this.state.list} />
@@ -67,7 +71,7 @@ class App extends React.Component {
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} />
+        <ScoreGrid style={{ display: this.state.teamSelected ? 'block' : 'none' }} ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} />
       </div>
     );
   }

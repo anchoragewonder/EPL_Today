@@ -23,7 +23,24 @@
     background-color: rgb(153, 153, 153);
 }
 
+#nav-logo{
+    width: 80px;
+    height: 80px;
+}
+
+@media only screen and (max-width: 992px) {
+    #nav-logo{
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
 @media only screen and (max-width: 578px) {
+    #nav-logo{
+        width: 70px;
+        height: 70px;
+    }
    
     .nav-scroll{
         height: 25vh;

@@ -19,7 +19,7 @@ export class NavList extends React.Component {
             <div className="nav-scroll">
                 {this.props.idMatcher.map((teamName, index) => (
                     <NavItem key={index} style={{ margin: "15px 20px 5px" }} onClick={() => { this.props.action(teamName.id); this.clickMe() }}>
-                        <img src={"/assets/logos/" + teamName.id + ".png"} style={{ width: "70px", height: '70px' }}></img>
+                        <img id="nav-logo" src={"/assets/logos/" + teamName.id + ".png"}></img>
                         <p>{teamName.name}</p>
                     </NavItem>
                 ))}

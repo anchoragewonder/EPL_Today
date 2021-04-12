@@ -122,7 +122,6 @@ a.anchor {
 }
 
 @media only screen and (max-width: 992px) {
-   
 
 }
     
@@ -154,8 +153,8 @@ a.anchor {
     }
 
     #col-style{
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
     }
 
     #date{
@@ -166,12 +165,13 @@ a.anchor {
         padding-right: 0rem;
         padding-left: 0rem;
         height: 20vh;
-        box-shadow: 4px 2px;
+        box-shadow: 0px black;
+        z-index: 99;
     }
 
     #side-team-logo{
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
         margin-top: 1rem;
     }
 
@@ -183,7 +183,7 @@ a.anchor {
     #side-team-header{
         padding-top: 1rem;
     }
-    
+   
 } 
 
 @media only screen and (max-width: 578px) {
@@ -201,8 +201,9 @@ a.anchor {
     }
 
     #side-team-logo{
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        margin-top: .5rem;
     }
 
     #sidebar{
@@ -230,7 +231,6 @@ a.anchor {
     #date{
         font-size: 12px;
     }
-
 
 }
     
