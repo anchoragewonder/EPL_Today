@@ -123,6 +123,33 @@ a.anchor {
 
 @media only screen and (max-width: 992px) {
 
+    #sidebar{
+        padding-right: 0rem;
+        padding-left: 0rem;
+        height: 30vh;
+        box-shadow: 2px black;
+        z-index: 99;
+    }
+
+    #sidebar-banner{
+        height: 30vh;
+    }
+
+    #col-style{
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
+    #score_table{
+        padding-right: 0rem;
+        height: 70vh;
+    }
+
+    #side-team-logo{
+        width: 150PX;
+        height: 150PX;
+        margin-top: 1.5rem;
+    }
 }
     
 @media only screen and (max-width: 768px) {
@@ -162,11 +189,7 @@ a.anchor {
     }
 
     #sidebar{
-        padding-right: 0rem;
-        padding-left: 0rem;
         height: 20vh;
-        box-shadow: 0px black;
-        z-index: 99;
     }
 
     #side-team-logo{

@@ -27,11 +27,11 @@ class App extends React.Component {
         { id: 'Liverpool', name: 'Liverpool', color: "#de1118" },
         { id: 'ManchesterCity', name: 'Manchester City', color: "#3572c2" },
         { id: 'ManchesterUnited', name: 'Manchester United', color: "#de1118" },
-        { id: 'NewcastleUnited', name: 'Newcastle United', color: "#de1118" },
+        { id: 'NewcastleUnited', name: 'Newcastle United', color: "#1E1E1E" },
         { id: 'Southampton', name: 'Southampton', color: "#de1118" },
         { id: 'SheffieldUnited', name: 'Sheffield United', color: "#de1118" },
-        { id: 'TottenhamHotspur', name: 'Tottenham', color: "#de1118" },
-        { id: 'WestBromwichAlbion', name: 'West Brom', color: "#de1118" },
+        { id: 'TottenhamHotspur', name: 'Tottenham', color: "#0a2c6e" },
+        { id: 'WestBromwichAlbion', name: 'West Brom', color: "#0a2c6e" },
         { id: 'WestHamUnited', name: 'West Ham', color: "#911a34" },
         { id: 'WolverhamptonWanderers', name: 'Wolves', color: "#ff9900" },
       ],
@@ -43,6 +43,7 @@ class App extends React.Component {
   getTeam(team) {
     localStorage.setItem('team', team);
     this.state.startingTeam = team;
+    this.setState({ teamSelected: true });
 
     fetch(`https://why92kpyh9.execute-api.us-east-1.amazonaws.com/Prod/teams/${team.replace(/\s/g, '')}`)
       .then(response => response.json())
@@ -55,15 +56,13 @@ class App extends React.Component {
     let storage_team = localStorage.getItem('team')
     if (storage_team && !this.state.startingTeam) {
       this.setState({ startingTeam: storage_team });
-      this.setState({ teamSelected: true })
+      this.setState({ teamSelected: true });
       this.getTeam(storage_team);
     }
     return storage_team;
   }
 
   render() {
-
-
     return (
       <div className="App">
         <NavList forwardRef={this.refScore} action={this.getTeam} idMatcher={this.state.list} />
@@ -71,7 +70,7 @@ class App extends React.Component {
           <h1 className="text-header">THIS IS EPL TODAY</h1>
           <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
-        <ScoreGrid style={{ display: this.state.teamSelected ? 'block' : 'none' }} ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} />
+        <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} isSelected={this.state.teamSelected} />
       </div>
     );
   }
