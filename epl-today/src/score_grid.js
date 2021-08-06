@@ -44,7 +44,7 @@ export class ScoreGrid extends React.Component {
 
     return (
       <Container fluid style={{ display: selected ? 'block' : 'none' }}>
-        <Row>
+        <Row id="row-spacer">
           <Col md={12} lg={3} id="sidebar">
             <a className='anchor' ref={this.tableRef}></a>
             <div id="sidebar-banner" style={divStyle}>

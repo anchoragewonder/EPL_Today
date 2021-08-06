@@ -64,6 +64,10 @@ a.anchor {
     flex-grow: 1;
 }
 
+#row-spacer {
+    margin-top: 2em;
+}
+
 #score_table{
     background:rgb(255, 255, 255);
     overflow: hidden;
@@ -101,8 +105,11 @@ a.anchor {
 }
 
 #sidebar-banner{
-    height: 70vh;
+    height: 80vh;
     color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
 
 #side-team-header {
@@ -112,9 +119,11 @@ a.anchor {
 }
 
 #side-team-logo {
-    margin-top: 4rem;
     width: 200px;
     height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #top-row{
@@ -188,6 +197,10 @@ a.anchor {
         font-size: 16px;
     }
 
+    #row-spacer{
+        margin-top: 0em;
+    }
+
     #sidebar{
         height: 20vh;
     }
@@ -195,7 +208,7 @@ a.anchor {
     #side-team-logo{
         width: 120px;
         height: 120px;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     #score_table{
@@ -226,7 +239,7 @@ a.anchor {
     #side-team-logo{
         width: 60px;
         height: 60px;
-        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
 
     #sidebar{

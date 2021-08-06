@@ -67,8 +67,6 @@ class App extends React.Component {
       <div className="App">
         <NavList forwardRef={this.refScore} action={this.getTeam} idMatcher={this.state.list} />
         <header className="App-header">
-          <h1 className="text-header">THIS IS EPL TODAY</h1>
-          <h2 className="text-intro">Click on a team above to view thier upcoming match schedule.</h2>
         </header>
         <ScoreGrid ref={this.refScore} teamMatches={this.state.matches} idMatcher={this.state.list} teamName={this.state.startingTeam} isSelected={this.state.teamSelected} />
       </div>
