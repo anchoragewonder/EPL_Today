@@ -6,10 +6,17 @@
 .App-header {
   background-color: #282c34;
   background-image: url('./assets/epl_bg_L.png');
+  background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;
   width: auto;
   background-position: center;
+}
+
+@media only screen and (min-height: 1100px) {
+  .App-header {
+    height: 85vh;
+  }
 }
 
 @media only screen and (max-width: 578px) {

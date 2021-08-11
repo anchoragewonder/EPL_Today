@@ -45,7 +45,7 @@ export class ScoreGrid extends React.Component {
     return (
       <Container fluid style={{ display: selected ? 'block' : 'none' }}>
         <Row id="row-spacer">
-          <Col md={12} lg={3} id="sidebar">
+          <Col md={12} lg={10} id="sidebar">
             <a className='anchor' ref={this.tableRef}></a>
             <div id="sidebar-banner" style={divStyle}>
               <h3 id="side-team-header">{this.getFullName(this.props.teamName)}</h3>
@@ -53,7 +53,7 @@ export class ScoreGrid extends React.Component {
             </div>
 
           </Col>
-          <Col id="col-style" md={12} lg={9} >
+          <Col id="col-style" md={12} lg={10}>
             <div id="score_table" style={{ margin: "auto", }}>
               <h2 id="score-header">RESULTS</h2>
               {this.props.teamMatches.map((match, index) => (

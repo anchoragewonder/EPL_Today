@@ -25,8 +25,6 @@ a.anchor {
     flex-direction: row;
 }
 
-
-
 .score_style{
     display: flex;
     flex-flow: column;
@@ -49,8 +47,6 @@ a.anchor {
 
 #col-style {
     background: #282c34;
-    padding-right: 4rem;
-    
 }
 
 #date{
@@ -65,7 +61,7 @@ a.anchor {
 }
 
 #row-spacer {
-    margin-top: 2em;
+    justify-content: center;
 }
 
 #score_table{
@@ -73,7 +69,6 @@ a.anchor {
     overflow: hidden;
     overflow-y: scroll;
     height: 80vh;
-    
 }
 
 #score_table::-webkit-scrollbar {
@@ -97,15 +92,16 @@ a.anchor {
 
 #sidebar {
     text-align: center;
-    padding-left: 1em;
     background-color: #282c34;
     display: flex;
     flex-flow: column;
-    height: 100vh;
+    height: 30vh;
+    box-shadow: 2px black;
+    z-index: 99;
 }
 
 #sidebar-banner{
-    height: 80vh;
+    height: 30vh;
     color: white;
     display: flex;
     flex-flow: column;
@@ -113,14 +109,13 @@ a.anchor {
 }
 
 #side-team-header {
-    padding-top: 2rem;
+    padding-top: .5rem;
     font-size: 2rem;
-   
 }
 
 #side-team-logo {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -130,120 +125,24 @@ a.anchor {
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 992px) {
-
-    #sidebar{
-        padding-right: 0rem;
-        padding-left: 0rem;
-        height: 30vh;
-        box-shadow: 2px black;
-        z-index: 99;
+@media only screen and (min-height: 1100px) {
+    a.anchor {
+        top: -15vh;
     }
-
-    #sidebar-banner{
-        height: 30vh;
-    }
-
-    #col-style{
-        padding-right: 0rem;
-        padding-left: 0rem;
-    }
-
-    #score_table{
-        padding-right: 0rem;
-        height: 70vh;
-    }
-
-    #side-team-logo{
-        width: 150PX;
-        height: 150PX;
-        margin-top: 1.5rem;
+    
+    #sidebar {
+        height: 20vh;
     }
 }
-    
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 700px) {
+
+    a.anchor {
+            top:-25vh;
+    }
 
     .logo_score_style{
-        margin-left: 10px;
-    }
-
-    .score-logo{
-        width: 35px;
-        height: 35px;
-    }
-
-    .score_style{
-        font-size: 16px;
-    }
-
-    .team-text{
-        font-size: 16px;
-    }
-    
-    #awayName{
-        padding-left: 0px;
-    }
-
-    #homeName{
-        padding-left: 0px
-    }
-
-    #col-style{
-        padding-right: 0rem;
-        padding-left: 0rem;
-    }
-
-    #date{
-        font-size: 16px;
-    }
-
-    #row-spacer{
-        margin-top: 0em;
-    }
-
-    #sidebar{
-        height: 20vh;
-    }
-
-    #side-team-logo{
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1rem;
-    }
-
-    #score_table{
-        padding-right: 0rem;
-        height: 60vh;
-    }
-
-    #side-team-header{
-        padding-top: 1rem;
-    }
-   
-} 
-
-@media only screen and (max-width: 578px) {
-   
-    a.anchor {
-        top:-25vh;
-    }
-
-    #score_table{
-        height: 55vh;
-    }
-    
-    #side-team-header{
-        font-size: 1.5rem;
-    }
-
-    #side-team-logo{
-        width: 60px;
-        height: 60px;
-        margin-bottom: .5rem;
-    }
-
-    #sidebar{
-        height: 20vh;
+        margin-left: 5px;
     }
 
     .score-logo{
@@ -257,16 +156,51 @@ a.anchor {
     }
 
     .team-text{
-        font-size: 12px;
+        font-size: 16px;
     }
     
-    .logo_score_style{
-        margin-left: 5px;
+    #awayName{
+        padding-left: 0px;
     }
 
+    #col-style{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
     #date{
         font-size: 12px;
     }
 
-}
+    #homeName{
+        padding-left: 0px
+    }
+
+    #sidebar{
+        height: 20vh;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #sidebar-banner{
+        height: 20vh;
+    }
+
+    #score_table{
+        padding-right: 0rem;
+        height: 55vh;
+    }
+
+    #side-team-header{
+        font-size: 1.5rem;
+    }
+
+    #side-team-logo{
+        width: 80px;
+        height: 80px;
+        margin-bottom: .5rem;
+    }
+
+} 
+
     
