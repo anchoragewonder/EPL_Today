@@ -20,7 +20,7 @@ export class NavList extends React.Component {
                 {this.props.idMatcher.map((teamName, index) => (
                     <NavItem key={index} style={{ margin: "15px 20px 5px" }} onClick={() => { this.props.action(teamName.id); this.clickMe() }}>
                         <img id="nav-logo" src={"/assets/logos/" + teamName.id + ".png"}></img>
-                        <p>{teamName.name}</p>
+                        <p className="nav-text">{teamName.name}</p>
                     </NavItem>
                 ))}
             </div>

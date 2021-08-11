@@ -124,7 +124,7 @@ a.anchor {
 #top-row{
     margin-bottom: 1rem;
 }
-
+/* adjustments for tablets */
 @media only screen and (min-height: 1100px) {
     a.anchor {
         top: -15vh;
@@ -132,6 +132,36 @@ a.anchor {
     
     #sidebar {
         height: 20vh;
+    }
+}
+
+/*adjustments for horizontal mobile devices */
+
+
+@media only screen and (max-height: 600px) {
+    #side-team-header{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #col-style{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #side-team-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    #sidebar{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #side_table{
+        height: 50vh;
     }
 }
 
@@ -162,11 +192,6 @@ a.anchor {
     #awayName{
         padding-left: 0px;
     }
-
-    #col-style{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
     
     #date{
         font-size: 12px;
@@ -178,8 +203,6 @@ a.anchor {
 
     #sidebar{
         height: 20vh;
-        padding-left: 0px;
-        padding-right: 0px;
     }
 
     #sidebar-banner{
