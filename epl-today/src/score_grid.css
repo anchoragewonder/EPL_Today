@@ -1,39 +1,38 @@
-
 a.anchor {
     display: block;
     position: relative;
-    top:-20vh;
+    top: -20vh;
     visibility: hidden;
 }
 
-.home-away-team{
+.home-away-team {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
 }
 
-.logo_score_style{
+.logo_score_style {
     justify-content: start;
 }
 
 .match-container {
-    border-bottom: rgba(177, 177, 177, 0.3) solid 2px;
+    border-bottom: rgba(0, 0, 0, 0.3) solid 2px;
     margin-bottom: 1em;
     padding-bottom: 1em;
     display: flex;
     flex-direction: row;
 }
 
-.score_style{
+.score_style {
     display: flex;
     flex-flow: column;
     width: 80px;
-    margin: auto; 
-    color: white;  
+    margin: auto;
+    color: white;
 }
 
-.score-logo{
+.score-logo {
     width: 40px;
     height: 40px;
     margin-left: 'auto';
@@ -49,10 +48,10 @@ a.anchor {
     background: #282c34;
 }
 
-#date{
+#date {
     display: flex;
     flex-flow: column;
-    margin: auto; 
+    margin: auto;
     flex-shrink: 0;
 }
 
@@ -64,8 +63,8 @@ a.anchor {
     justify-content: center;
 }
 
-#score_table{
-    background:rgb(255, 255, 255);
+#score_table {
+    background: rgb(255, 255, 255);
     overflow: hidden;
     overflow-y: scroll;
     height: 80vh;
@@ -74,11 +73,11 @@ a.anchor {
 #score_table::-webkit-scrollbar {
     width: 1em;
 }
-   
+
 #score_table::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
-   
+
 #score_table::-webkit-scrollbar-thumb {
     background-color: rgb(51, 51, 51);
     outline: 1px solid rgb(134, 134, 134);
@@ -100,7 +99,7 @@ a.anchor {
     z-index: 99;
 }
 
-#sidebar-banner{
+#sidebar-banner {
     height: 30vh;
     color: white;
     display: flex;
@@ -121,30 +120,28 @@ a.anchor {
     margin-right: auto;
 }
 
-#top-row{
+#top-row {
     margin-bottom: 1rem;
 }
+
 /* adjustments for tablets */
 @media only screen and (min-height: 1100px) {
     a.anchor {
         top: -15vh;
     }
-    
+
     #sidebar {
         height: 20vh;
     }
 }
 
 /*adjustments for horizontal mobile devices */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    #side-team-header{
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    #side-team-header {
         font-size: 1rem;
     }
-    #col-style{
+
+    #col-style {
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -154,18 +151,18 @@ a.anchor {
         height: 60px;
     }
 
-    #sidebar{
+    #sidebar {
         padding-left: 0px;
         padding-right: 0px;
     }
 
-    #side_table{
+    #side_table {
         height: 50vh;
     }
 }
 
-@media only screen and (max-height: 600px){
-    #side-team-header{
+@media only screen and (max-height: 600px) {
+    #side-team-header {
         font-size: 1rem;
     }
 }
@@ -173,67 +170,67 @@ a.anchor {
 @media only screen and (max-width: 700px) {
 
     a.anchor {
-            top:-25vh;
+        top: -25vh;
     }
 
-    .logo_score_style{
+    .logo_score_style {
         margin-left: 5px;
     }
 
-    .score-logo{
+    .score-logo {
         width: 25px;
         height: 25px;
     }
 
-    .score_style{
+    .score_style {
         font-size: 12px;
         width: 60px;
     }
 
-    .team-text{
+    .team-text {
         font-size: 16px;
     }
-    
-    #awayName{
+
+    #awayName {
         padding-left: 0px;
     }
-    #col-style{
+
+    #col-style {
         padding-left: 0px;
         padding-right: 0px;
     }
-    #date{
+
+    #date {
         font-size: 12px;
     }
 
-    #homeName{
+    #homeName {
         padding-left: 0px
     }
 
-    #sidebar{
+    #sidebar {
         height: 20vh;
         padding-left: 0px;
         padding-right: 0px;
     }
 
-    #sidebar-banner{
+    #sidebar-banner {
         height: 20vh;
     }
 
-    #score_table{
+    #score_table {
         padding-right: 0rem;
         height: 55vh;
     }
 
-    #side-team-header{
+    #side-team-header {
         font-size: 1.5rem;
     }
 
-    #side-team-logo{
+    #side-team-logo {
         width: 80px;
         height: 80px;
         margin-bottom: .5rem;
     }
 
-} 
-
-    
+}

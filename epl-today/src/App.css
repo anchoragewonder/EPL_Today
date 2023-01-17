@@ -20,11 +20,10 @@
 }
 
 @media only screen and (max-width: 578px) {
-   
-  .App-header{
+
+  .App-header {
     height: 75vh;
     background-image: url('./assets/epl_bg_xs.png');
   }
 
 }
-
